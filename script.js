@@ -16,7 +16,7 @@ const pointer = {
   y: 0.5 * window.innerHeight,
 };
 const params = {
-  pointsNumber: 17,
+  pointsNumber: 7,
   widthFactor: 0.3,
   mouseThreshold: 1,
   spring: 0.4,
