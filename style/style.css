@@ -19,26 +19,39 @@ canvas {
   width: 100svw;
   z-index: 99;
 }
+@media (max-width: 800px) {
+  canvas {
+    display: none;
+  }
+}
 
 #polygons {
   width: 100svw;
   height: 100svh;
   position: absolute;
   pointer-events: none;
+  overflow: hidden !important;
 }
 #polygons svg {
   animation: 27s rotate-anim linear infinite;
-  height: 37em;
-  width: 37em;
+  height: 57em;
+  width: 57em;
   position: absolute;
   top: 50%;
-  right: -15%;
+  right: -20%;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  #polygons svg {
+    right: -15%;
+    top: 75%;
+  }
 }
 
 body {
   background: #202020;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100svw;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -55,6 +68,11 @@ body nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 800px) {
+  body nav {
+    padding: 10svh 0;
+  }
 }
 body nav ul {
   display: flex;
@@ -81,26 +99,38 @@ body nav ul li {
   line-height: 120%;
   font-family: monospace;
 }
+@media (max-width: 1200px) {
+  body nav ul li {
+    height: 57px;
+    width: 57px;
+    font-size: 37px;
+  }
+}
+@media (max-width: 800px) {
+  body nav ul li {
+    height: 47px;
+    width: 47px;
+    font-size: 27px;
+  }
+}
 body nav ul li.active {
   background: #dfdfdf !important;
   color: #202020 !important;
-}
-body main {
-  padding-top: 8%;
 }
 body main .bottom-content-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 body main .bottom-content-container .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100%;
 }
 body main .bottom-content-container .button-container button {
-  margin-top: 7.7em;
   height: 77px;
   width: 77px;
   background: transparent;
@@ -131,6 +161,15 @@ body main .bottom-content-container .button-container button span {
 }
 body main .bottom-content-container .button-container button span:last-of-type {
   scale: 0%;
+}
+@media (max-width: 1200px) {
+  body main .bottom-content-container .button-container button {
+    height: 57px;
+    width: 57px;
+    font-size: 37px;
+    gap: 4px;
+    margin-top: 2.7em;
+  }
 }
 body main p {
   color: #dfdfdf;

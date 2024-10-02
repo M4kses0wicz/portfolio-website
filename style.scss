@@ -17,6 +17,12 @@
   flex-direction: $fd;
 }
 
+@mixin mobile-w($px) {
+  @media (max-width: $px) {
+    @content;
+  }
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -25,6 +31,9 @@ canvas {
   height: 100svh;
   width: 100svw;
   z-index: 99;
+  @include mobile-w(800px) {
+    display: none;
+  }
 }
 
 #polygons {
@@ -32,21 +41,26 @@ canvas {
   height: 100svh;
   position: absolute;
   pointer-events: none;
+  overflow: hidden !important;
   svg {
     animation: 27s rotate-anim linear infinite;
-    height: 37em;
-    width: 37em;
+    height: 57em;
+    width: 57em;
     position: absolute;
     top: 50%;
-    right: -15%;
+    right: -20%;
     overflow: hidden;
+    @include mobile-w(600px) {
+      right: -15%;
+      top: 75%;
+    }
   }
 }
 
 body {
   background: #202020;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100svw;
   overflow: hidden;
   @include Flex_center(column);
   align-items: start !important;
@@ -55,6 +69,9 @@ body {
     top: 0;
     width: 100%;
     padding: 3em 0;
+    @include mobile-w(800px) {
+      padding: 10svh 0;
+    }
     @include Flex_center(row);
     ul {
       @include Flex_center(row);
@@ -73,6 +90,16 @@ body {
         text-align: center;
         line-height: 120%;
         font-family: monospace;
+        @include mobile-w(1200px) {
+          height: 57px;
+          width: 57px;
+          font-size: 37px;
+        }
+        @include mobile-w(800px) {
+          height: 47px;
+          width: 47px;
+          font-size: 27px;
+        }
         &.active {
           background: #dfdfdf !important;
           color: #202020 !important;
@@ -81,16 +108,16 @@ body {
     }
   }
   main {
-    padding-top: 8%;
     .bottom-content-container {
       width: 100%;
       // border: 1px dotted red;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       .button-container {
         @include Flex_center(column);
+        height: 100%;
         button {
-          margin-top: 7.7em;
           height: 77px;
           width: 77px;
           background: transparent;
@@ -120,6 +147,13 @@ body {
             &:last-of-type {
               scale: 0%;
             }
+          }
+          @include mobile-w(1200px) {
+            height: 57px;
+            width: 57px;
+            font-size: 37px;
+            gap: 4px;
+            margin-top: 2.7em;
           }
         }
       }
