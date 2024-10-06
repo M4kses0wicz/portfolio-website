@@ -129,6 +129,7 @@ hoverElements.forEach((element) => {
 
 function increaseSize(e) {
   targetSize = parseInt(e.target.getAttribute("hover-size"));
+  console.log(e.target.getAttribute("hover-text"));
   startAnimation();
 }
 
@@ -145,4 +146,17 @@ function startAnimation() {
 
 function easeInOutQuint(x) {
   return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+}
+
+const blocks = document.querySelectorAll(".block");
+
+console.log(blocks);
+function transition() {
+  blocks.forEach((block) => {
+    block.classList.add("appear");
+    setTimeout(() => {
+      // block.classList.add("to-right");
+      block.classList.remove("appear");
+    }, 1500);
+  });
 }
