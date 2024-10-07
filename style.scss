@@ -23,6 +23,12 @@
   }
 }
 
+@mixin mobile-h($px) {
+  @media (max-height: $px) {
+    @content;
+  }
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -51,8 +57,10 @@ canvas {
     right: -20%;
     overflow: hidden;
     @include mobile-w(600px) {
-      right: -15%;
-      top: 75%;
+      right: -25%;
+      top: 70%;
+      width: 107em;
+      height: 107em;
     }
   }
 }
@@ -75,9 +83,11 @@ body {
       font-size: clamp(100px, 7em, 100vw);
       letter-spacing: 10px;
       font-family: "lato";
-      color: #00000010;
+      color: #494949;
       font-weight: 900;
       transition-delay: 0.5s;
+      text-shadow: 1px 1px 0px #303030, -1px -1px 0px #303030,
+        1px -1px 0px #303030, -1px 1px 0px #303030;
     }
     .block {
       transition: 0.25s;
@@ -208,9 +218,12 @@ body {
       color: #dfdfdf;
       margin-top: 2.7em;
       margin-left: 4.7em;
-      font-size: clamp(17px, 1.25em, 77px);
+      font-size: clamp(24px, 1.75em, 77px);
       width: fit-content;
       font-family: monospace;
+      @include mobile-w(550px) {
+        margin-left: 2em;
+      }
       span {
         display: inline-block;
         width: clamp(2px, 0.2em, 20px);
@@ -221,7 +234,7 @@ body {
       }
     }
     h1 {
-      font-size: clamp(70px, 9em, 7777px);
+      font-size: clamp(75px, 9em, 7777px);
       color: #dfdfdf;
       cursor: none;
       display: flex;

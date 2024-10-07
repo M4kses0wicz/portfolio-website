@@ -43,8 +43,10 @@ canvas {
 }
 @media (max-width: 600px) {
   #polygons svg {
-    right: -15%;
-    top: 75%;
+    right: -25%;
+    top: 70%;
+    width: 107em;
+    height: 107em;
   }
 }
 
@@ -71,9 +73,10 @@ body .transition span {
   font-size: clamp(100px, 7em, 100vw);
   letter-spacing: 10px;
   font-family: "lato";
-  color: rgba(0, 0, 0, 0.062745098);
+  color: #494949;
   font-weight: 900;
   transition-delay: 0.5s;
+  text-shadow: 1px 1px 0px #303030, -1px -1px 0px #303030, 1px -1px 0px #303030, -1px 1px 0px #303030;
 }
 body .transition .block {
   transition: 0.25s;
@@ -291,9 +294,14 @@ body main p {
   color: #dfdfdf;
   margin-top: 2.7em;
   margin-left: 4.7em;
-  font-size: clamp(17px, 1.25em, 77px);
+  font-size: clamp(24px, 1.75em, 77px);
   width: fit-content;
   font-family: monospace;
+}
+@media (max-width: 550px) {
+  body main p {
+    margin-left: 2em;
+  }
 }
 body main p span {
   display: inline-block;
@@ -304,7 +312,7 @@ body main p span {
   margin-bottom: 4px;
 }
 body main h1 {
-  font-size: clamp(70px, 9em, 7777px);
+  font-size: clamp(75px, 9em, 7777px);
   color: #dfdfdf;
   cursor: none;
   display: flex;
