@@ -10,6 +10,9 @@
   font-size: 1vw;
 }
 
+$white: #dfdfdf;
+$black: #202020;
+
 @mixin Flex_center($fd) {
   display: flex;
   justify-content: center;
@@ -66,12 +69,35 @@ canvas {
 }
 
 body {
-  background: #202020;
+  background: $black;
   height: 100svh;
   width: 100svw;
   overflow: hidden;
   @include Flex_center(column);
   align-items: start !important;
+  .loading-screen {
+    height: 100svh;
+    width: 100svw;
+    position: fixed;
+    top: 0;
+    background: $black;
+    z-index: 999;
+    cursor: progress;
+    * {
+      cursor: progress;
+    }
+    color: $white;
+    font-family: "lato", sans-serif;
+    font-weight: 900;
+    font-size: 170px;
+    @include Flex_center(row);
+    .container {
+      border: 2px dashed red;
+      width: 700px;
+      height: 500px;
+      @include Flex_center(column);
+    }
+  }
   .transition {
     position: fixed;
     top: 0;
@@ -83,11 +109,11 @@ body {
       font-size: clamp(100px, 7em, 100vw);
       letter-spacing: 10px;
       font-family: "lato";
-      color: #494949;
+      color: $black;
       font-weight: 900;
       transition-delay: 0.5s;
-      text-shadow: 1px 1px 0px #303030, -1px -1px 0px #303030,
-        1px -1px 0px #303030, -1px 1px 0px #303030;
+      text-shadow: 1px 1px 0px $white, -1px -1px 0px $white, 1px -1px 0px $white,
+        -1px 1px 0px $white;
     }
     .block {
       transition: 0.25s;
@@ -100,7 +126,7 @@ body {
       @for $i from 0 through 10 {
         &:nth-of-type(#{$i}) {
           transition-delay: calc($i * 0.1s);
-          background: lighten($color: #303030, $amount: $i);
+          background: lighten($color: #202020, $amount: calc($i * 0.25));
           span {
             padding-left: calc(7% * $i);
           }
@@ -134,7 +160,7 @@ body {
         height: 77px;
         width: 77px;
         background: transparent;
-        color: #dfdfdf;
+        color: $white;
         border-radius: 77px;
         overflow: hidden;
         font-size: 57px;
@@ -157,8 +183,8 @@ body {
           font-size: 27px;
         }
         &.active {
-          background: #dfdfdf !important;
-          color: #202020 !important;
+          background: $white !important;
+          color: $black !important;
         }
       }
     }
@@ -177,9 +203,9 @@ body {
           height: 77px;
           width: 77px;
           background: transparent;
-          color: #dfdfdf;
+          color: $white;
           border-radius: 77px;
-          border: 3px solid #dfdfdf;
+          border: 3px solid $white;
           display: flex;
           align-items: center;
           overflow: hidden;
@@ -215,7 +241,7 @@ body {
       }
     }
     p {
-      color: #dfdfdf;
+      color: $white;
       margin-top: 2.7em;
       margin-left: 4.7em;
       font-size: clamp(24px, 1.75em, 77px);
@@ -229,13 +255,13 @@ body {
         width: clamp(2px, 0.2em, 20px);
         height: clamp(2px, 0.2em, 20px);
         border-radius: 7px;
-        background: #dfdfdf;
+        background: $white;
         margin-bottom: 4px;
       }
     }
     h1 {
-      font-size: clamp(75px, 9em, 7777px);
-      color: #dfdfdf;
+      font-size: clamp(75px, 10em, 7777px);
+      color: $white;
       cursor: none;
       display: flex;
       overflow: hidden;
@@ -248,8 +274,10 @@ body {
       .container {
         display: flex;
         animation: 37s slide infinite linear;
-        span {
-          margin-left: 0.7em;
+        transform: translateX(0);
+        .gap {
+          height: 100%;
+          width: 0.7em;
         }
       }
     }
@@ -274,14 +302,14 @@ body {
   }
 }
 
-@keyframes pulse-anim {
-  0% {
-    opacity: 80%;
-  }
-  50% {
-    opacity: 20%;
-  }
-  100% {
-    opacity: 80%;
-  }
-}
+// @keyframes pulse-anim {
+//   0% {
+//     opacity: 80%;
+//   }
+//   50% {
+//     opacity: 20%;
+//   }
+//   100% {
+//     opacity: 80%;
+//   }
+// }
