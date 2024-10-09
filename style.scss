@@ -152,6 +152,15 @@ body {
           transition-delay: calc($i * 0.075s);
           background: lighten($color: #202020, $amount: calc($i * 0.25));
         }
+        @include mobile-w(1000px) {
+          &:nth-of-type(#{$i}) {
+            @if $i <= 5 {
+              display: none;
+            } @else {
+              width: 20svw;
+            }
+          }
+        }
       }
     }
   }
@@ -313,15 +322,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes border-anim {
-  0% {
-    border-width: 0px;
-  }
-  100% {
-    border-width: 2px;
   }
 }
 

@@ -139,45 +139,100 @@ body .transition .block:nth-of-type(0) {
   transition-delay: 0s;
   background: #202020;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(0) {
+    display: none;
+  }
+}
 body .transition .block:nth-of-type(1) {
   transition-delay: 0.075s;
   background: #212121;
+}
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(1) {
+    display: none;
+  }
 }
 body .transition .block:nth-of-type(2) {
   transition-delay: 0.15s;
   background: #212121;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(2) {
+    display: none;
+  }
+}
 body .transition .block:nth-of-type(3) {
   transition-delay: 0.225s;
   background: #222222;
+}
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(3) {
+    display: none;
+  }
 }
 body .transition .block:nth-of-type(4) {
   transition-delay: 0.3s;
   background: #232323;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(4) {
+    display: none;
+  }
+}
 body .transition .block:nth-of-type(5) {
   transition-delay: 0.375s;
   background: #232323;
+}
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(5) {
+    display: none;
+  }
 }
 body .transition .block:nth-of-type(6) {
   transition-delay: 0.45s;
   background: #242424;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(6) {
+    width: 20svw;
+  }
+}
 body .transition .block:nth-of-type(7) {
   transition-delay: 0.525s;
   background: #242424;
+}
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(7) {
+    width: 20svw;
+  }
 }
 body .transition .block:nth-of-type(8) {
   transition-delay: 0.6s;
   background: #252525;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(8) {
+    width: 20svw;
+  }
+}
 body .transition .block:nth-of-type(9) {
   transition-delay: 0.675s;
   background: #262626;
 }
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(9) {
+    width: 20svw;
+  }
+}
 body .transition .block:nth-of-type(10) {
   transition-delay: 0.75s;
   background: #262626;
+}
+@media (max-width: 1000px) {
+  body .transition .block:nth-of-type(10) {
+    width: 20svw;
+  }
 }
 body nav {
   position: fixed;
@@ -356,13 +411,5 @@ body main h1 .container .gap {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes border-anim {
-  0% {
-    border-width: 0px;
-  }
-  100% {
-    border-width: 2px;
   }
 }/*# sourceMappingURL=style.css.map */
