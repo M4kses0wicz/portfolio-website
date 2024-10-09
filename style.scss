@@ -102,39 +102,51 @@ body {
     position: fixed;
     top: 0;
     height: 100svh;
+    width: 100svw;
     z-index: 999;
     display: flex;
     flex-direction: column;
-    span {
-      font-size: clamp(100px, 7em, 100vw);
-      letter-spacing: 10px;
-      font-family: "lato";
-      color: $black;
-      font-weight: 900;
-      transition-delay: 0.5s;
-      text-shadow: 1px 1px 0px $white, -1px -1px 0px $white, 1px -1px 0px $white,
-        -1px 1px 0px $white;
+    justify-content: space-between;
+    pointer-events: none;
+    .container {
+      width: 100svw;
+      display: flex;
+      .block {
+        border-bottom: $white 2px solid;
+        // border-left: $white 2px solid;
+        // border-right: $white 2px solid;
+      }
+      &:not(:first-of-type) {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        .block {
+          border-top: $white 2px solid;
+          // border-left: $white 2px solid;
+          // border-right: $white 2px solid;
+          border-bottom: none;
+        }
+      }
     }
     .block {
-      transition: 0.25s;
-      height: 10%;
-      width: 0svw;
-      border-top-right-radius: 777px;
-      border-bottom-right-radius: 777px;
+      transition: 0.5s;
+      height: 0svh;
+      width: 10svw;
+      // border-top-right-radius: 777px;
+      // border-bottom-right-radius: 777px;
       overflow: hidden;
       position: relative;
       @for $i from 0 through 10 {
         &:nth-of-type(#{$i}) {
-          transition-delay: calc($i * 0.1s);
+          transition-delay: calc($i * 0.075s);
           background: lighten($color: #202020, $amount: calc($i * 0.25));
           span {
-            padding-left: calc(7% * $i);
+            padding-left: calc(8% * $i);
           }
         }
       }
       &.appear {
-        width: 100svw;
-        border-radius: 0px;
+        height: 50svh;
       }
       &.to-right {
         align-self: flex-end;
