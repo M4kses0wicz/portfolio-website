@@ -160,3 +160,30 @@ function transition() {
     }, 1500);
   });
 }
+
+const loader = document.querySelector(".loading-screen");
+const loadingTxt = document.querySelector(".loader");
+const line = document.querySelector(".line");
+const spans = loadingTxt.children;
+
+console.log(loadingTxt.children);
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    // testing
+    line.classList.add("loaded");
+    setTimeout(() => {
+      loader.classList.add("loaded");
+      loadingTxt.classList.add("loaded");
+    }, 700);
+    setTimeout(() => {
+      loader.remove();
+      blocks.forEach((block) => {
+        block.classList.remove("appear");
+      });
+    }, 1250);
+  }, 2000); // testing
+});
+console.log(
+  "Why r u even checking my fantastic code? It works, that's all that matters. Kids these days..."
+);

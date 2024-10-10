@@ -75,27 +75,75 @@ body {
   overflow: hidden;
   @include Flex_center(column);
   align-items: start !important;
+  // .warning-box-container {
+  //   display: none;
+  //   @include mobile-w(1000px) {
+  //     display: block;
+  //     height: 100svh;
+  //     width: 100svw;
+  //     position: absolute;
+  //     top: 0;
+  //     color: $white;
+  //   }
+  // }
   .loading-screen {
     height: 100svh;
     width: 100svw;
     position: fixed;
     top: 0;
     background: $black;
-    z-index: 999;
+    z-index: 9999;
     cursor: progress;
+    transition: 1s;
+    &.loaded {
+      opacity: 0;
+    }
     * {
       cursor: progress;
     }
     color: $white;
-    font-family: "lato", sans-serif;
-    font-weight: 900;
-    font-size: 170px;
+    font-family: monospace;
+    font-weight: 400;
+    letter-spacing: 17px;
+    font-size: 50px;
+    @include mobile-w(1000px) {
+      letter-spacing: 7px;
+      font-size: 27px;
+    }
     @include Flex_center(row);
+    .line {
+      width: 0svw;
+      height: 4px;
+      background: transparent;
+      position: absolute;
+      transition: 0.5s;
+      &.loaded {
+        width: 100svw;
+        background: $white;
+        box-shadow: 0 70px 0 70px $black;
+      }
+    }
     .container {
-      border: 2px dashed red;
-      width: 700px;
-      height: 500px;
+      // border: 2px dashed red;
       @include Flex_center(column);
+      .loader {
+        transform: translateY(-55%);
+        display: flex;
+        transition: 0.5s transform;
+        &.loaded {
+          transform: translateY(100%);
+        }
+        span {
+          display: block;
+          animation: 3s jump-anim cubic-bezier(0.79, -1.48, 1, 1.79) infinite;
+          transform: translateY(0);
+          @for $i from 0 through 10 {
+            &:nth-of-type(#{$i}) {
+              animation-delay: calc($i * 0.1s);
+            }
+          }
+        }
+      }
     }
   }
   .transition {
@@ -103,7 +151,7 @@ body {
     top: 0;
     height: 100svh;
     width: 100svw;
-    z-index: 999;
+    z-index: 799;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -322,6 +370,18 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes jump-anim {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-17px);
+  }
+  20% {
+    transform: translateY(0px);
   }
 }
 
