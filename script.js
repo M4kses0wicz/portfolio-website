@@ -184,6 +184,12 @@ window.addEventListener("load", () => {
     }, 1250);
   }, 2000); // testing
 });
-console.log(
-  "Why r u even checking my fantastic code? It works, that's all that matters. Kids these days..."
-);
+
+function closeWarningBox() {
+  const box = document.querySelector(".warning-box-container");
+  box.remove();
+}
+
+// console.log(
+//   "Why r u even checking my fantastic code? It works, that's all that matters. Kids these days..."
+// );

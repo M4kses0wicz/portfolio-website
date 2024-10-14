@@ -75,17 +75,46 @@ body {
   overflow: hidden;
   @include Flex_center(column);
   align-items: start !important;
-  // .warning-box-container {
-  //   display: none;
-  //   @include mobile-w(1000px) {
-  //     display: block;
-  //     height: 100svh;
-  //     width: 100svw;
-  //     position: absolute;
-  //     top: 0;
-  //     color: $white;
-  //   }
-  // }
+  .warning-box-container {
+    display: none;
+    @include mobile-w(1000px) {
+      display: block;
+      height: 100svh;
+      width: 100svw;
+      position: absolute;
+      top: 0;
+      color: $white;
+      @include Flex_center(column);
+      backdrop-filter: blur(17px);
+      z-index: 100;
+      .warning-box {
+        height: 70%;
+        width: 70%;
+        border: solid $white 2px;
+        border-radius: 17px;
+        padding: 5%;
+        padding-top: 0;
+        @include Flex_center(column);
+        gap: 10%;
+        span {
+          font-size: 170px;
+        }
+        p {
+          font-size: 15px;
+          text-align: center;
+          font-family: monospace;
+        }
+        button {
+          padding: 10px;
+          background: transparent;
+          border-radius: 777px;
+          border: $white solid 2px;
+          color: $white;
+          font-family: monospace;
+        }
+      }
+    }
+  }
   .loading-screen {
     height: 100svh;
     width: 100svw;
