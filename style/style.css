@@ -67,7 +67,7 @@ body .warning-box-container {
 @media (max-width: 1000px) {
   body .warning-box-container {
     display: block;
-    height: 100svh;
+    height: 55svh;
     width: 100svw;
     position: absolute;
     top: 0;
@@ -76,13 +76,14 @@ body .warning-box-container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    backdrop-filter: blur(17px);
     z-index: 100;
+    margin-top: 50%;
   }
   body .warning-box-container .warning-box {
-    height: 70%;
-    width: 70%;
+    height: 100%;
+    width: 80%;
     border: solid #dfdfdf 2px;
+    backdrop-filter: blur(17px);
     border-radius: 17px;
     padding: 5%;
     padding-top: 0;
@@ -93,7 +94,7 @@ body .warning-box-container {
     gap: 10%;
   }
   body .warning-box-container .warning-box span {
-    font-size: 170px;
+    font-size: 150px;
   }
   body .warning-box-container .warning-box p {
     font-size: 15px;
@@ -143,12 +144,13 @@ body .loading-screen * {
 body .loading-screen .line {
   width: 0svw;
   height: 4px;
-  background: transparent;
+  background: #dfdfdf;
   position: absolute;
   transition: 0.5s;
 }
 body .loading-screen .line.loaded {
   width: 100svw;
+  height: 4px;
   background: #dfdfdf;
   box-shadow: 0 70px 0 70px #202020;
 }
@@ -159,7 +161,7 @@ body .loading-screen .container {
   flex-direction: column;
 }
 body .loading-screen .container .loader {
-  transform: translateY(-55%);
+  transform: translateY(-65%);
   display: flex;
   transition: 0.5s transform;
 }

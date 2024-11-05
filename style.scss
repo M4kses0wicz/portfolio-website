@@ -79,25 +79,26 @@ body {
     display: none;
     @include mobile-w(1000px) {
       display: block;
-      height: 100svh;
+      height: 55svh;
       width: 100svw;
       position: absolute;
       top: 0;
       color: $white;
       @include Flex_center(column);
-      backdrop-filter: blur(17px);
       z-index: 100;
+      margin-top: 50%;
       .warning-box {
-        height: 70%;
-        width: 70%;
+        height: 100%;
+        width: 80%;
         border: solid $white 2px;
+        backdrop-filter: blur(17px);
         border-radius: 17px;
         padding: 5%;
         padding-top: 0;
         @include Flex_center(column);
         gap: 10%;
         span {
-          font-size: 170px;
+          font-size: 150px;
         }
         p {
           font-size: 15px;
@@ -143,11 +144,12 @@ body {
     .line {
       width: 0svw;
       height: 4px;
-      background: transparent;
+      background: $white;
       position: absolute;
       transition: 0.5s;
       &.loaded {
         width: 100svw;
+        height: 4px;
         background: $white;
         box-shadow: 0 70px 0 70px $black;
       }
@@ -156,7 +158,7 @@ body {
       // border: 2px dashed red;
       @include Flex_center(column);
       .loader {
-        transform: translateY(-55%);
+        transform: translateY(-65%);
         display: flex;
         transition: 0.5s transform;
         &.loaded {
