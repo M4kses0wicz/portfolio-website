@@ -76,7 +76,7 @@ body .warning-box-container {
   transform: translateX(-50%);
   transition: 0.5s ease-in-out;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   body .warning-box-container.appear {
     display: block;
     height: 75px;
@@ -89,6 +89,9 @@ body .warning-box-container {
     flex-direction: row;
     z-index: 100;
     margin-top: 50%;
+  }
+  body .warning-box-container.appear.closed {
+    animation: 1s warning-box-close ease-in-out forwards;
   }
   body .warning-box-container.appear .warning-box {
     height: 100%;
@@ -103,29 +106,30 @@ body .warning-box-container {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    justify-content: space-around;
   }
   body .warning-box-container.appear .warning-box .laptop {
     font-size: 50px;
   }
 }
-@media (max-width: 1000px) and (max-width: 400px) {
+@media (max-width: 800px) and (max-width: 400px) {
   body .warning-box-container.appear .warning-box .laptop {
     font-size: 45px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   body .warning-box-container.appear .warning-box p {
     font-size: 17px;
     text-align: center;
     font-family: monospace;
   }
 }
-@media (max-width: 1000px) and (max-width: 400px) {
+@media (max-width: 800px) and (max-width: 400px) {
   body .warning-box-container.appear .warning-box p {
     font-size: 15px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   body .warning-box-container.appear .warning-box button {
     display: flex;
     justify-content: center;
@@ -142,7 +146,7 @@ body .warning-box-container {
     font-size: 32px;
   }
 }
-@media (max-width: 1000px) and (max-width: 400px) {
+@media (max-width: 800px) and (max-width: 400px) {
   body .warning-box-container.appear .warning-box button span {
     font-size: 27px;
   }
@@ -209,6 +213,7 @@ body .loading-screen .container .loader span {
   display: block;
   animation: 3s jump-anim cubic-bezier(0.79, -1.48, 1, 1.79) infinite;
   transform: translateY(0);
+  font-size: 47px;
 }
 body .loading-screen .container .loader span:nth-of-type(0) {
   animation-delay: 0s;
@@ -581,5 +586,13 @@ body main h2 .container .gap {
 @keyframes warning-box-appear {
   to {
     bottom: 2%;
+  }
+}
+@keyframes warning-box-close {
+  from {
+    bottom: 2%;
+  }
+  to {
+    bottom: -40%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -56,15 +56,6 @@ window.addEventListener("resize", setupCanvas);
 ctx.strokeStyle = "white";
 
 function update(t) {
-  if (!mouseMoved) {
-    pointer.x =
-      (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) *
-      window.innerWidth;
-    pointer.y =
-      (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) *
-      window.innerHeight;
-  }
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   trail.forEach((p, pIdx) => {
     const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
@@ -189,9 +180,8 @@ window.addEventListener("load", () => {
   }, 6750);
 });
 
-function closeWarningBox() {
-  const box = document.querySelector(".warning-box-container");
-  box.remove();
+function closeBox() {
+  warningBox.classList.add("closed");
 }
 
 // console.log(

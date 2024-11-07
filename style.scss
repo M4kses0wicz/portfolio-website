@@ -90,11 +90,14 @@ body {
     transform: translateX(-50%);
     transition: 0.5s ease-in-out;
     &.appear {
-      @include mobile-w(1000px) {
+      @include mobile-w(800px) {
         display: block;
         height: 75px;
         width: 100svw;
         animation: 1s warning-box-appear ease-in-out forwards;
+        &.closed {
+          animation: 1s warning-box-close ease-in-out forwards;
+        }
         color: $white;
         @include Flex_center(row);
         z-index: 100;
@@ -110,6 +113,7 @@ body {
           padding-top: 0;
           gap: 10px;
           @include Flex_center(row);
+          justify-content: space-around;
           .laptop {
             font-size: 50px;
             @include mobile-w(400px) {
@@ -196,6 +200,7 @@ body {
           display: block;
           animation: 3s jump-anim cubic-bezier(0.79, -1.48, 1, 1.79) infinite;
           transform: translateY(0);
+          font-size: 47px;
           @for $i from 0 through 10 {
             &:nth-of-type(#{$i}) {
               animation-delay: calc($i * 0.1s);
@@ -448,6 +453,15 @@ body {
 @keyframes warning-box-appear {
   to {
     bottom: 2%;
+  }
+}
+
+@keyframes warning-box-close {
+  from {
+    bottom: 2%;
+  }
+  to {
+    bottom: -40%;
   }
 }
 
