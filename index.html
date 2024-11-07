@@ -20,27 +20,27 @@
     />
   </head>
   <body>
+    <h1>Maksymilian Klemensowicz Frontend Web Developer</h1>
     <!-- Made By Maksymilian Klemensowicz
             M4kses0wicz on github -->
 
     <canvas id="cursor"></canvas>
 
-    <div class="warning-box-container">
+    <div class="warning-box-container" id="warning-box">
       <div class="warning-box">
-        <span class="material-symbols-outlined"> laptop </span>
-        <p>
-          You're using a small device. For the best visual experience, please
-          switch to a laptop or a device with a larger screen.
-        </p>
-        <button onclick="closeWarningBox()">I understand</button>
+        <span class="material-symbols-outlined laptop"> laptop </span>
+        <p>Use a larger device for better visual experience.</p>
+        <button onclick="closeWarningBox()">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
       </div>
     </div>
 
     <div class="loading-screen">
       <div class="container">
         <div class="loader">
-          <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span
-          ><span>n</span><span>g</span><span>.</span><span>.</span
+          <span>.</span><span>.</span><span>.</span><span>.</span><span>.</span
+          ><span>.</span><span>.</span><span>.</span><span>.</span
           ><span>.</span>
         </div>
         <div class="line"></div>
@@ -95,7 +95,7 @@
       </ul>
     </nav>
     <main>
-      <h1 hover-size="57" hover-text="copy email">
+      <h2 hover-size="57" hover-text="copy email">
         <span class="container">
           <span>Maksymilian</span>
           <span class="gap"></span>
@@ -116,7 +116,7 @@
           <span>Klemensowicz</span>
           <span class="gap"></span>
         </span>
-      </h1>
+      </h2>
       <div class="bottom-content-container">
         <p hover-size="27">
           Frontend Web Developer <br />

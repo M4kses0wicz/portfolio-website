@@ -10,6 +10,13 @@
   font-size: 1vw;
 }
 
+h1 {
+  color: transparent;
+  pointer-events: none;
+  font-size: 0px;
+  z-index: 0;
+}
+
 $white: #dfdfdf;
 $black: #202020;
 
@@ -77,41 +84,62 @@ body {
   align-items: start !important;
   .warning-box-container {
     display: none;
-    @include mobile-w(1000px) {
-      display: block;
-      height: 55svh;
-      width: 100svw;
-      position: absolute;
-      top: 0;
-      color: $white;
-      @include Flex_center(column);
-      z-index: 100;
-      margin-top: 50%;
-      .warning-box {
-        height: 100%;
-        width: 80%;
-        border: solid $white 2px;
-        backdrop-filter: blur(17px);
-        border-radius: 17px;
-        padding: 5%;
-        padding-top: 0;
-        @include Flex_center(column);
-        gap: 10%;
-        span {
-          font-size: 150px;
-        }
-        p {
-          font-size: 15px;
-          text-align: center;
-          font-family: monospace;
-        }
-        button {
-          padding: 10px;
-          background: transparent;
-          border-radius: 777px;
-          border: $white solid 2px;
-          color: $white;
-          font-family: monospace;
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease-in-out;
+    &.appear {
+      @include mobile-w(1000px) {
+        display: block;
+        height: 75px;
+        width: 100svw;
+        animation: 1s warning-box-appear ease-in-out forwards;
+        color: $white;
+        @include Flex_center(row);
+        z-index: 100;
+        margin-top: 50%;
+        .warning-box {
+          height: 100%;
+          width: 95%;
+          // border: solid $white 2px;
+          backdrop-filter: blur(7px);
+          border-radius: 17px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 0;
+          gap: 10px;
+          @include Flex_center(row);
+          .laptop {
+            font-size: 50px;
+            @include mobile-w(400px) {
+              font-size: 45px;
+            }
+          }
+          p {
+            font-size: 17px;
+            text-align: center;
+            font-family: monospace;
+            @include mobile-w(400px) {
+              font-size: 15px;
+            }
+          }
+          button {
+            @include Flex_center(row);
+            background: transparent;
+            border-radius: 777px;
+            // border: $white solid 2px;
+            border: none;
+            color: $white;
+            font-family: monospace;
+            padding: 2px;
+            span {
+              font-size: 32px;
+              @include mobile-w(400px) {
+                font-size: 27px;
+              }
+            }
+          }
         }
       }
     }
@@ -362,7 +390,7 @@ body {
         margin-bottom: 4px;
       }
     }
-    h1 {
+    h2 {
       font-size: clamp(75px, 10em, 7777px);
       color: $white;
       cursor: none;
@@ -414,6 +442,12 @@ body {
   }
   20% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes warning-box-appear {
+  to {
+    bottom: 2%;
   }
 }
 

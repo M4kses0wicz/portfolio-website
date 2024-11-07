@@ -165,8 +165,9 @@ const loader = document.querySelector(".loading-screen");
 const loadingTxt = document.querySelector(".loader");
 const line = document.querySelector(".line");
 const spans = loadingTxt.children;
+const warningBox = document.getElementById("warning-box");
 
-console.log(loadingTxt.children);
+console.log(warningBox);
 
 window.addEventListener("load", () => {
   setTimeout(() => {
@@ -182,7 +183,10 @@ window.addEventListener("load", () => {
         block.classList.remove("appear");
       });
     }, 1250);
-  }, 2000); // testing
+  }, 4250); // testing
+  setTimeout(() => {
+    warningBox.classList.add("appear");
+  }, 6750);
 });
 
 function closeWarningBox() {

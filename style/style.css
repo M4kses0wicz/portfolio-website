@@ -10,6 +10,13 @@
   font-size: 1vw;
 }
 
+h1 {
+  color: transparent;
+  pointer-events: none;
+  font-size: 0px;
+  z-index: 0;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -63,51 +70,81 @@ body {
 }
 body .warning-box-container {
   display: none;
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease-in-out;
 }
 @media (max-width: 1000px) {
-  body .warning-box-container {
+  body .warning-box-container.appear {
     display: block;
-    height: 55svh;
+    height: 75px;
     width: 100svw;
-    position: absolute;
-    top: 0;
+    animation: 1s warning-box-appear ease-in-out forwards;
     color: #dfdfdf;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 100;
     margin-top: 50%;
   }
-  body .warning-box-container .warning-box {
+  body .warning-box-container.appear .warning-box {
     height: 100%;
-    width: 80%;
-    border: solid #dfdfdf 2px;
-    backdrop-filter: blur(17px);
+    width: 95%;
+    backdrop-filter: blur(7px);
     border-radius: 17px;
-    padding: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 0;
+    gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10%;
+    flex-direction: row;
   }
-  body .warning-box-container .warning-box span {
-    font-size: 150px;
+  body .warning-box-container.appear .warning-box .laptop {
+    font-size: 50px;
   }
-  body .warning-box-container .warning-box p {
-    font-size: 15px;
+}
+@media (max-width: 1000px) and (max-width: 400px) {
+  body .warning-box-container.appear .warning-box .laptop {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1000px) {
+  body .warning-box-container.appear .warning-box p {
+    font-size: 17px;
     text-align: center;
     font-family: monospace;
   }
-  body .warning-box-container .warning-box button {
-    padding: 10px;
+}
+@media (max-width: 1000px) and (max-width: 400px) {
+  body .warning-box-container.appear .warning-box p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  body .warning-box-container.appear .warning-box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     background: transparent;
     border-radius: 777px;
-    border: #dfdfdf solid 2px;
+    border: none;
     color: #dfdfdf;
     font-family: monospace;
+    padding: 2px;
+  }
+  body .warning-box-container.appear .warning-box button span {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1000px) and (max-width: 400px) {
+  body .warning-box-container.appear .warning-box button span {
+    font-size: 27px;
   }
 }
 body .loading-screen {
@@ -491,7 +528,7 @@ body main p span {
   background: #dfdfdf;
   margin-bottom: 4px;
 }
-body main h1 {
+body main h2 {
   font-size: clamp(75px, 10em, 7777px);
   color: #dfdfdf;
   cursor: none;
@@ -500,16 +537,16 @@ body main h1 {
   font-weight: 300;
   width: 100vw;
 }
-body main h1 span {
+body main h2 span {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
-body main h1 .container {
+body main h2 .container {
   display: flex;
   animation: 37s slide infinite linear;
   transform: translateX(0);
 }
-body main h1 .container .gap {
+body main h2 .container .gap {
   height: 100%;
   width: 0.7em;
 }
@@ -539,5 +576,10 @@ body main h1 .container .gap {
   }
   20% {
     transform: translateY(0px);
+  }
+}
+@keyframes warning-box-appear {
+  to {
+    bottom: 2%;
   }
 }/*# sourceMappingURL=style.css.map */
