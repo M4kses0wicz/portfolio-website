@@ -512,20 +512,22 @@ body main .bottom-content-container .button-container button span:last-of-type {
     margin-top: 2.7em;
   }
 }
-body main p {
+body main p,
+body main h3 {
   color: #dfdfdf;
-  margin-top: 2.7em;
   margin-left: 4.7em;
   font-size: clamp(24px, 1.75em, 77px);
   width: fit-content;
   font-family: monospace;
 }
 @media (max-width: 550px) {
-  body main p {
+  body main p,
+  body main h3 {
     margin-left: 2em;
   }
 }
-body main p span {
+body main p span,
+body main h3 span {
   display: inline-block;
   width: clamp(2px, 0.2em, 20px);
   height: clamp(2px, 0.2em, 20px);

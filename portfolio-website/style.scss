@@ -376,9 +376,9 @@ body {
         }
       }
     }
-    p {
+    p,
+    h3 {
       color: $white;
-      margin-top: 2.7em;
       margin-left: 4.7em;
       font-size: clamp(24px, 1.75em, 77px);
       width: fit-content;
