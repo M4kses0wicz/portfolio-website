@@ -11,3 +11,27 @@ $barcode-font: "Libre Barcode 39 Extended Text";
   align-items: center;
   flex-direction: $flex-direction;
 }
+
+@mixin MaxWidth($px) {
+  @media (max-width: $px) {
+    @content;
+  }
+}
+
+@mixin MaxHeight($px) {
+  @media (max-height: $px) {
+    @content;
+  }
+}
+
+@mixin MinWidth($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+
+@mixin MinHeight($px) {
+  @media (min-height: $px) {
+    @content;
+  }
+}
