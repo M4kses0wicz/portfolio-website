@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div></div>
+  <h1>Klemensowicz</h1>
 </template>
 
 <style lang="scss" scoped></style>
