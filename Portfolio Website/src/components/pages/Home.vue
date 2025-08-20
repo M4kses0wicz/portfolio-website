@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import Main from "../sections/Main.vue";
+import Canvas from "../UI/Background.vue";
+</script>
 
 <template>
-  <h1>Klemensowicz</h1>
+  <Canvas></Canvas>
+  <Main></Main>
 </template>
 
 <style lang="scss" scoped></style>
