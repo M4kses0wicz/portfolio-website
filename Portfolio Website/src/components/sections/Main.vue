@@ -104,18 +104,19 @@
 main {
   width: calc(100svw - 29px);
   margin-left: 7px;
-  display: flex;
-  flex-direction: column;
+  @include FlexCenter(column);
 
   p {
     font-family: $secondary-font;
     color: $white;
     width: 570px;
     font-size: $M-size-font;
+    align-self: flex-start;
 
     &:nth-of-type(2) {
       align-self: flex-end;
       text-align: right;
+      margin-top: 10px;
     }
   }
 
