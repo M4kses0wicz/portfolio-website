@@ -3,51 +3,50 @@
 <template>
   <main>
     <p>
-      <strong class="normal">I</strong> d<strong class="soft">e</strong>s<strong
+      <strong class="normal">I</strong> s<strong class="soft">p</strong>e<strong
         class="dim"
-        >i</strong
-      >g<strong class="bold">n</strong> exp<strong class="bright">e</strong
-      >r<strong class="faint">i</strong>e<strong class="strong">n</strong
-      >c<strong class="normal">e</strong>s
-      <strong class="soft">t</strong>h<strong class="dim">a</strong>t
-      <strong class="bold">a</strong>r<strong class="bright">e</strong> e<strong
-        class="faint"
-        >a</strong
-      >s<strong class="strong">y</strong> t<strong class="normal">o</strong>
-      n<strong class="soft">a</strong>v<strong class="dim">i</strong>g<strong
-        class="bold"
-        >a</strong
-      >t<strong class="bright">e</strong> a<strong class="faint">n</strong>d
-      v<strong class="strong">i</strong>s<strong class="normal">u</strong
-      >a<strong class="soft">l</strong>l<strong class="dim">y</strong> e<strong
-        class="bold"
+        >c</strong
+      >i<strong class="bold">a</strong>l<strong class="bright">i</strong
+      >z<strong class="faint">e</strong> i<strong class="strong">n</strong>
+      U<strong class="normal">I</strong>/<strong class="soft">U</strong>X
+      d<strong class="dim">e</strong>s<strong class="bold">i</strong>g<strong
+        class="bright"
         >n</strong
-      >g<strong class="bright">a</strong>g<strong class="faint">i</strong
-      >n<strong class="strong">g</strong>.
-      <strong class="normal">I</strong> a<strong class="soft">i</strong>m
-      <strong class="dim">t</strong>o m<strong class="bold">a</strong>k<strong
-        class="bright"
-        >e</strong
       >
-      d<strong class="faint">i</strong>g<strong class="strong">i</strong
-      >t<strong class="normal">a</strong>l p<strong class="soft">r</strong
-      >o<strong class="dim">d</strong>u<strong class="bold">c</strong>t<strong
-        class="bright"
+      f<strong class="faint">o</strong>r w<strong class="strong">e</strong
+      >b<strong class="normal">s</strong>i<strong class="soft">t</strong
+      >e<strong class="dim">s</strong> a<strong class="bold">n</strong>d
+      d<strong class="bright">i</strong>g<strong class="faint">i</strong
+      >t<strong class="strong">a</strong>l p<strong class="normal">l</strong
+      >a<strong class="soft">t</strong>f<strong class="dim">o</strong>r<strong
+        class="bold"
+        >m</strong
+      >s. <strong class="bright">I</strong> c<strong class="faint">r</strong
+      >e<strong class="strong">a</strong>t<strong class="normal">e</strong>
+      i<strong class="soft">n</strong>t<strong class="dim">u</strong>i<strong
+        class="bold"
+        >t</strong
+      >i<strong class="bright">v</strong>e u<strong class="faint">s</strong
+      >e<strong class="strong">r</strong> j<strong class="normal">o</strong
+      >u<strong class="soft">r</strong>n<strong class="dim">e</strong>y<strong
+        class="bold"
         >s</strong
       >
-      f<strong class="faint">e</strong>e<strong class="strong">l</strong>
-      e<strong class="normal">f</strong>f<strong class="soft">o</strong>r<strong
-        class="dim"
-        >t</strong
-      >l<strong class="bold">e</strong>s<strong class="bright">s</strong>,
-      e<strong class="faint">n</strong>j<strong class="strong">o</strong
-      >y<strong class="normal">a</strong>b<strong class="soft">l</strong>e,
-      a<strong class="dim">n</strong>d m<strong class="bold">e</strong>m<strong
-        class="bright"
-        >o</strong
-      >r<strong class="faint">a</strong>b<strong class="strong">l</strong>e
-      f<strong class="normal">o</strong>r u<strong class="soft">s</strong
-      >e<strong class="dim">r</strong>s.
+      t<strong class="strong">h</strong>a<strong class="normal">t</strong>
+      g<strong class="soft">u</strong>i<strong class="dim">d</strong>e u<strong
+        class="bold"
+        >s</strong
+      >e<strong class="bright">r</strong>s s<strong class="faint">e</strong
+      >a<strong class="strong">m</strong>l<strong class="normal">e</strong
+      >s<strong class="soft">s</strong>l<strong class="dim">y</strong> t<strong
+        class="bold"
+        >h</strong
+      >r<strong class="bright">o</strong>u<strong class="faint">g</strong>h
+      e<strong class="strong">v</strong>e<strong class="normal">r</strong>y
+      i<strong class="soft">n</strong>t<strong class="dim">e</strong>r<strong
+        class="bold"
+        >a</strong
+      >c<strong class="bright">t</strong>i<strong class="faint">o</strong>n.
     </p>
     <div id="title">
       <img src="../../assets/Klemensowicz.svg" alt="" />
@@ -58,12 +57,9 @@
       w<strong class="dim">e</strong>b<strong class="bold">s</strong>i<strong
         class="strong"
         >t</strong
-      >e<strong class="bright">s</strong> a<strong class="faint">n</strong>d
-      <strong class="normal">a</strong>p<strong class="soft">p</strong>s
-      t<strong class="dim">h</strong>a<strong class="bold">t</strong> a<strong
-        class="strong"
-        >r</strong
-      >e s<strong class="bright">m</strong>o<strong class="faint">o</strong
+      >e<strong class="bright">s</strong> t<strong class="dim">h</strong
+      >a<strong class="bold">t</strong> a<strong class="strong">r</strong>e
+      s<strong class="bright">m</strong>o<strong class="faint">o</strong
       >t<strong class="normal">h</strong>, i<strong class="soft">n</strong
       >t<strong class="dim">u</strong>i<strong class="bold">t</strong>i<strong
         class="strong"
@@ -108,17 +104,25 @@
 main {
   width: calc(100svw - 29px);
   margin-left: 7px;
+  display: flex;
+  flex-direction: column;
 
   p {
     font-family: $secondary-font;
     color: $white;
     width: 570px;
     font-size: $M-size-font;
+
+    &:nth-of-type(2) {
+      align-self: flex-end;
+      text-align: right;
+    }
   }
 
   #title {
     width: 100%;
     pointer-events: none;
+    margin: 50px 0px;
 
     img {
       pointer-events: none;
