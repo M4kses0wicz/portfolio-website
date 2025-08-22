@@ -1,9 +1,19 @@
+@use "sass:math" as *;
+
 $black: #0e0e0e;
 $white: #d9d9d9;
 
 $primary-font: "Rubik 80s Fade";
 $secondary-font: "Cutive Mono";
 $barcode-font: "Libre Barcode 39 Extended Text";
+
+$XS-size-font: 7px;
+$S-size-font: 12px;
+$M-size-font: 18px;
+$L-size-font: 32px;
+$XL-size-font: 74px;
+
+$timing-fct: steps(2);
 
 @mixin FlexCenter($flex-direction) {
   display: flex;
@@ -34,4 +44,109 @@ $barcode-font: "Libre Barcode 39 Extended Text";
   @media (min-height: $px) {
     @content;
   }
+}
+
+@for $i from 1 through 777 {
+  strong:nth-of-type(#{$i}) {
+    font-weight: 100;
+    animation-delay: calc(random(50) * 0.1s) !important;
+  }
+}
+
+@keyframes blink-faint {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+strong.faint {
+  animation: blink-faint 0.7s infinite $timing-fct;
+}
+
+@keyframes blink-dim {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+strong.dim {
+  animation: blink-dim 1.7s infinite $timing-fct;
+}
+
+@keyframes blink-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+strong.soft {
+  animation: blink-soft 2s infinite $timing-fct;
+}
+
+@keyframes blink-normal {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+strong.normal {
+  animation: blink-normal 1.1s infinite $timing-fct;
+}
+
+@keyframes blink-bold {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+strong.bold {
+  animation: blink-bold 0.7s infinite $timing-fct;
+}
+
+@keyframes blink-strong {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+strong.strong {
+  animation: blink-strong 0.4s infinite $timing-fct;
+}
+
+@keyframes blink-bright {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+strong.bright {
+  animation: blink-bright 1s infinite $timing-fct;
 }
