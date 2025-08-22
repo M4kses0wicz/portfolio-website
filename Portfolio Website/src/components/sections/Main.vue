@@ -96,6 +96,17 @@
       >s<strong class="faint">h</strong>e<strong class="normal">d</strong>.
     </p>
   </main>
+  <div class="container">
+    <div class="terminal"></div>
+    <div class="wrapper">
+      <p>Explore</p>
+      <div class="arrow"></div>
+    </div>
+    <div class="mail">
+      <p>Contact me</p>
+      <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
