@@ -105,6 +105,7 @@ main {
   width: calc(100svw - 29px);
   margin-left: 7px;
   @include FlexCenter(column);
+  margin-top: clamp(70px, 17.5vh, 21vh);
 
   p {
     font-family: $secondary-font;
@@ -123,7 +124,7 @@ main {
   #title {
     width: 100%;
     pointer-events: none;
-    margin: 50px 0px;
+    margin: 25px 0px;
 
     img {
       pointer-events: none;
