@@ -95,18 +95,22 @@
       >d p<strong class="strong">o</strong>l<strong class="bright">i</strong
       >s<strong class="faint">h</strong>e<strong class="normal">d</strong>.
     </p>
+
+    <div class="container">
+      <div class="terminal"></div>
+      <div class="wrapper">
+        <p>Explore</p>
+        <div class="arrow">
+          <div class="line"></div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+      <div class="mail">
+        <p>Contact me</p>
+        <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
+      </div>
+    </div>
   </main>
-  <div class="container">
-    <div class="terminal"></div>
-    <div class="wrapper">
-      <p>Explore</p>
-      <div class="arrow"></div>
-    </div>
-    <div class="mail">
-      <p>Contact me</p>
-      <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
-    </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -140,6 +144,43 @@ main {
     img {
       pointer-events: none;
       width: 100%;
+    }
+  }
+
+  .container {
+    width: 100%;
+    @include FlexCenter(row);
+    gap: 7px;
+
+    div {
+      width: 33.333%;
+      @include FlexCenter(column);
+
+      p {
+        text-align: center;
+        width: 100%;
+      }
+
+      .arrow {
+        margin-top: 25px;
+        width: 100%;
+        @include FlexCenter(column);
+
+        .line {
+          height: 70px;
+          width: 1px;
+          background: $white;
+          opacity: 75%;
+        }
+
+        .triangle {
+          height: 8px;
+          width: 8px;
+          background: $white;
+          opacity: 75%;
+          clip-path: polygon(0 0, 50% 100%, 100% 0);
+        }
+      }
     }
   }
 }
