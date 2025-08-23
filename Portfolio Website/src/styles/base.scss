@@ -46,7 +46,7 @@ $timing-fct: steps(2);
   }
 }
 
-@for $i from 1 through 777 {
+@for $i from 1 through 77 {
   strong:nth-of-type(#{$i}) {
     font-weight: 100;
     animation-delay: calc(random(50) * 0.1s) !important;

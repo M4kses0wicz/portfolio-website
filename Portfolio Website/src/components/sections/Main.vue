@@ -106,7 +106,11 @@
         </div>
       </div>
       <div class="mail">
-        <p>Contact me</p>
+        <p>
+          C<strong class="soft">o</strong
+          ><strong class="strong">n</strong>ta<strong class="normal">c</strong>t
+          m<strong class="normal">e</strong>
+        </p>
         <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
       </div>
     </div>
@@ -171,6 +175,8 @@ main {
           width: 1px;
           background: $white;
           opacity: 75%;
+
+          animation: line-anim 4s ease infinite;
         }
 
         .triangle {
@@ -182,6 +188,12 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes line-anim {
+  50% {
+    height: 80px;
   }
 }
 </style>
