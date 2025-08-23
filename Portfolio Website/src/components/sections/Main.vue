@@ -99,7 +99,10 @@
     <div class="container">
       <div class="terminal"></div>
       <div class="wrapper">
-        <p>Explore</p>
+        <p>
+          E<strong class="bold">x</strong>pl<strong class="soft">o</strong
+          ><strong class="normal">r</strong>e
+        </p>
         <div class="arrow">
           <div class="line"></div>
           <div class="triangle"></div>
@@ -111,7 +114,14 @@
           ><strong class="strong">n</strong>ta<strong class="normal">c</strong>t
           m<strong class="normal">e</strong>
         </p>
-        <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
+        <a href="mailto:contact@klemensowicz.pl" title="Email me"
+          >c<strong class="bright">o</strong>n<strong class="strong">t</strong
+          >a<strong class="bold">c</strong>t<strong class="bright">@</strong
+          >k<strong class="strong">l</strong>e<strong class="bold">m</strong
+          >e<strong class="bright">n</strong>s<strong class="strong">o</strong
+          >w<strong class="bold">i</strong>c<strong class="bright">z</strong
+          >.<strong class="strong">p</strong>l</a
+        >
       </div>
     </div>
   </main>
@@ -163,6 +173,13 @@ main {
       p {
         text-align: center;
         width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: $M-size-font;
+        font-family: $secondary-font;
       }
 
       .arrow {
