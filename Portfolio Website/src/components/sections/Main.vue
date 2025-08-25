@@ -118,6 +118,12 @@ main {
   @include FlexCenter(column);
   height: calc(100svh - 15px);
 
+  p {
+    font-family: $secondary-font;
+    color: $white;
+    font-size: $M-size-font;
+  }
+
   .main-txt-container {
     width: 100%;
     @include FlexCenter(column);
@@ -127,20 +133,20 @@ main {
       width: 100%;
       @include FlexCenter(column);
 
+      p {
+        font-family: $secondary-font;
+        color: $white;
+        width: 570px;
+        font-size: $M-size-font;
+        align-self: flex-start;
+      }
+
       p:nth-of-type(2) {
         align-self: flex-end;
         text-align: right;
         margin-top: 10px;
       }
     }
-  }
-
-  p {
-    font-family: $secondary-font;
-    color: $white;
-    width: 570px;
-    font-size: $M-size-font;
-    align-self: flex-start;
   }
 
   #title {
@@ -162,18 +168,42 @@ main {
 
     div {
       width: 33.333%;
-      @include FlexCenter(column);
+      display: flex;
+      flex-direction: column;
 
-      p {
-        text-align: center;
-        width: 100%;
+      &.terminal {
+        // display: block;
+        height: 100%;
       }
 
-      a {
-        text-decoration: none;
-        color: $white;
-        font-size: $M-size-font;
-        font-family: $secondary-font;
+      &.wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        p {
+          text-align: center !important;
+          width: 100%;
+        }
+      }
+
+      &.mail {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        text-align: right;
+
+        a {
+          text-decoration: none;
+          color: $white;
+          font-size: $M-size-font;
+          font-family: $secondary-font;
+        }
+      }
+
+      p {
+        width: 100%;
       }
 
       .arrow {
