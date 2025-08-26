@@ -305,6 +305,8 @@ main {
           flex-direction: row;
           width: 100%;
 
+          // display: none; ///////////////////////////////////////////
+
           .time {
             opacity: 75% !important;
             margin-right: 5px;

@@ -22,6 +22,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: calc(100svw - 29px);
+  mix-blend-mode: difference;
 
   .lang {
     display: flex;
