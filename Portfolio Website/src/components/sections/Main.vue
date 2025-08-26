@@ -79,7 +79,132 @@
       </div>
     </div>
     <div class="container">
-      <div class="terminal"></div>
+      <div class="terminal">
+        <div class="line">
+          <p class="time">[21:34:01]</p>
+          <p>>>> Initializing secure data retrieval sequence...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:01]</p>
+          <p>SYS-LOG: Processing packet 82345...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:01]</p>
+          <p>SYS-LOG: Processing packet 12038...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:01]</p>
+          <p>SYS-LOG: Processing packet 54219...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:01]</p>
+          <p>SYS-LOG: Processing packet 30587...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:02]</p>
+          <p>SYS-LOG: Connection established to DESIGN_CORE_SERVER_777</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:02]</p>
+          <p>SYS-LOG: Fetching profile: Maksymilian Klemensowicz</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:03]</p>
+          <p>SYS-LOG: Parsing data streams...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:03]</p>
+          <p>DATA: 4fjdK2sQhXc3Bz1yLeT0VwM8aR9qN7u</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:03]</p>
+          <p>DATA: P8nYlC5zJqH1aE7xRwT3gV0oM2kB6uS</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:03]</p>
+          <p>DATA: W7rHnD4mXbF2sJ8aTqK5vP0yG1eL9zU</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:04]</p>
+          <p>PROFILE: Name: Maksymilian Klemensowicz</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:04]</p>
+          <p>PROFILE: Role: Front-end Developer / UI-UX Designer</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:04]</p>
+          <p>SYS-LOG: Data verification complete.</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:04]</p>
+          <p>SYS-LOG: Secure channel closing...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:05]</p>
+          <p>DATA-HARVEST: Collecting user behavioral patterns...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:05]</p>
+          <p>DATA-HARVEST: Browser history: 2,847 entries captured</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:05]</p>
+          <p>DATA-HARVEST: Location data: 156 coordinates logged</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:06]</p>
+          <p>DATA-HARVEST: Shopping preferences: 73 categories identified</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:06]</p>
+          <p>MONETIZATION: Establishing connection to ADTECH_BROKER_DELTA...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:06]</p>
+          <p>MONETIZATION: Packaging user profile for sale...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:07]</p>
+          <p>MONETIZATION: Profile sold to UNKNOWN_CORP_4471 for $3.47</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:07]</p>
+          <p>AD-ENGINE: Personalizing advertisement algorithms...</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:07]</p>
+          <p>AD-ENGINE: Targeted ad deployment: ACTIVE</p>
+        </div>
+
+        <div class="line">
+          <p class="time">[21:34:08]</p>
+          <p>SYS-LOG: Session terminated. User unaware.</p>
+        </div>
+      </div>
       <div class="wrapper">
         <p>
           E<strong class="bold">x</strong>pl<strong class="soft">o</strong
@@ -128,6 +253,7 @@ main {
     width: 100%;
     @include FlexCenter(column);
     height: 75%;
+    padding-top: 5%;
 
     .wrapper {
       width: 100%;
@@ -172,14 +298,30 @@ main {
       flex-direction: column;
 
       &.terminal {
-        // display: block;
+        color: $white;
         height: 100%;
+
+        .line {
+          flex-direction: row;
+          width: 100%;
+
+          .time {
+            opacity: 75% !important;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: $S-size-font;
+            opacity: 50%;
+          }
+        }
       }
 
       &.wrapper {
         display: flex;
         flex-direction: column;
         height: 100%;
+
         p {
           text-align: center !important;
           width: 100%;
@@ -199,12 +341,13 @@ main {
           color: $white;
           font-size: $M-size-font;
           font-family: $secondary-font;
+          margin-bottom: 10px;
         }
       }
 
-      p {
-        width: 100%;
-      }
+      // p {
+      //   width: 100%;
+      // }
 
       .arrow {
         margin-top: 25px;
