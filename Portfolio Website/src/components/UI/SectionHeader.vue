@@ -369,6 +369,12 @@ const props = defineProps({
         width: 1px;
         background: $black;
         opacity: 17.5%;
+
+        @for $i from 1 through 14 {
+          &:nth-of-type(#{$i}) {
+            animation: line-anim-#{$i} 7s ease infinite;
+          }
+        }
       }
     }
   }
@@ -377,6 +383,24 @@ const props = defineProps({
 @keyframes anim {
   to {
     transform: translateY(-50%);
+  }
+}
+
+@keyframes line-anim-1 {
+  50% {
+    height: 30px;
+  }
+}
+
+@keyframes line-anim-2 {
+  50% {
+    height: 55px;
+  }
+}
+
+@keyframes line-anim-3 {
+  50% {
+    height: 62px;
   }
 }
 </style>
