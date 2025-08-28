@@ -46,10 +46,10 @@ $timing-fct: steps(2);
   }
 }
 
-@for $i from 1 through 77 {
-  strong:nth-of-type(#{$i}) {
+@for $i from 1 through 3 {
+  strong:nth-of-type(#{$i}n) {
     font-weight: 100;
-    animation-delay: calc(random(50) * 0.1s) !important;
+    animation-delay: calc(random(3) * 0.1s) !important;
   }
 }
 
