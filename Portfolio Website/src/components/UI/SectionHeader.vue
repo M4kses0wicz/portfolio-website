@@ -313,7 +313,7 @@ const props = defineProps({
 
   h1 {
     font-family: $primary-font;
-    font-size: $XL-size-font;
+    font-size: $XXL-size-font;
     font-weight: 400;
     width: 95%;
     @include FlexCenter(row);
