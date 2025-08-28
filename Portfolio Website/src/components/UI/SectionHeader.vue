@@ -327,9 +327,11 @@ const props = defineProps({
 
     .wrapper {
       animation: anim 7s linear infinite;
+      // border-bottom: red 2px solid;
+      animation-delay: -7s;
 
       &:nth-of-type(2) {
-        animation-delay: 7s;
+        animation-delay: 0s;
       }
 
       .num {
