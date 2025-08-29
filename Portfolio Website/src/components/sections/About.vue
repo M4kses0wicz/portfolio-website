@@ -214,7 +214,7 @@ import SectionHeader from "../UI/SectionHeader.vue";
 
         animation: anim ease forwards;
         animation-timeline: view();
-        animation-range: entry 80% cover 100%;
+        animation-range: entry 10% cover 200%;
 
         p {
           font-size: $L-size-font;
