@@ -145,7 +145,7 @@ function bistro() {
 
 #experience {
   width: calc(100svw - 29px);
-  margin: 500px 0px 0px 7px;
+  margin: 500px 0px 11000px 7px;
   padding: 0px 16.5%;
 
   .container {
@@ -160,10 +160,20 @@ function bistro() {
 
       div {
         width: 50%;
-        height: 100%;
+        // height: 100%;
       }
     }
 
+    .txt {
+      // border: red 1px dotted;
+      height: 12%;
+      display: flex;
+      align-items: end;
+
+      animation: anim ease forwards;
+      animation-timeline: view();
+      animation-range: entry 10% cover 150%;
+    }
     p {
       color: $white;
       font-family: $secondary-font;
@@ -253,6 +263,12 @@ function bistro() {
         }
       }
     }
+  }
+}
+
+@keyframes anim {
+  to {
+    height: 100%;
   }
 }
 </style>
