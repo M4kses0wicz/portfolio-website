@@ -100,7 +100,7 @@
         <div class="line">
           <p class="time">[21:34:04]</p>
           <p>
-            Front-end Dev/UI-UX Designer | Verification
+            Front-end Dev/UI-UX Designer | age: 17 | Verification
             <strong class="green">OK</strong>
           </p>
         </div>
