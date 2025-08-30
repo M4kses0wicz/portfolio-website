@@ -147,7 +147,7 @@ function bistro() {
 
 #experience {
   width: calc(100svw - 29px);
-  margin: 500px 0px 11000px 7px;
+  margin: 500px 0px 0px 7px;
   padding: 0px 16.5%;
 
   .container {
