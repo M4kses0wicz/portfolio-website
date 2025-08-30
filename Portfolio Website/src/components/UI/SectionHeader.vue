@@ -9,40 +9,40 @@ const props = defineProps({
   <div class="container">
     <div class="bg-section">
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-1"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line anim-1"></div>
+        <div class="line anim-2"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-2"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line anim-1"></div>
+        <div class="line anim-2"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-3"></div>
       </div>
     </div>
     <div class="bg-section bottom">
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-1"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line anim-3"></div>
+        <div class="line anim-2"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-1"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line anim-3"></div>
+        <div class="line anim-1"></div>
       </div>
       <div class="wrapper">
-        <div class="line"></div>
+        <div class="line anim-2"></div>
       </div>
     </div>
     <div class="carousel">
@@ -303,6 +303,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 @use "../../styles/base.scss" as *;
+@use "sass:math" as *;
 
 .container {
   width: 100%;
@@ -372,9 +373,9 @@ const props = defineProps({
         background: $black;
         opacity: 17.5%;
 
-        @for $i from 1 through 14 {
-          &:nth-of-type(#{$i}) {
-            animation: line-anim-#{$i} 7s ease infinite;
+        @for $i from 1 through 3 {
+          &.anim-#{$i} {
+            animation: line-anim-#{$i} calc(random(7) * 1s) ease infinite;
           }
         }
       }
