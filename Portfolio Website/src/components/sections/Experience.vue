@@ -42,7 +42,9 @@ function bistro() {
               >a</strong
             >nt inv<strong class="bold">e</strong>stm<strong class="strong"
               >e</strong
-            >nts
+            >nts - W<strong class="normal">e</strong>bs<strong class="soft"
+              >i</strong
+            >te
           </li>
           <li class="plastmet">
             <span
@@ -174,6 +176,7 @@ function bistro() {
       animation-timeline: view();
       animation-range: entry 10% cover 150%;
     }
+
     p {
       color: $white;
       font-family: $secondary-font;
