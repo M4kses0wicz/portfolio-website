@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+let h = new Date().getUTCHours();
+let m = new Date().getUTCMinutes();
+let s = new Date().getUTCSeconds();
+</script>
 
 <template>
   <main>
@@ -81,24 +85,24 @@
     <div class="container">
       <div class="terminal">
         <div class="line">
-          <p class="time">[21:34:01]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>Init secure sequence... packets 82345,12038,54219,30587</p>
         </div>
 
         <div class="line">
-          <p class="time">[21:34:02]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
             Connected DESIGN_CORE_SERVER_777 | Profile: Maksymilian Klemensowicz
           </p>
         </div>
 
         <div class="line">
-          <p class="time">[21:34:03]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>DATA: 4fjdK2sQhXc3Bz1yLeT0VwM8aR9qN7u | P8nYlC5zJqH1aE...</p>
         </div>
 
         <div class="line">
-          <p class="time">[21:34:04]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
             Front-end Dev/UI-UX Designer | age: 17 | Verification
             <strong class="green">OK</strong>
@@ -106,17 +110,17 @@
         </div>
 
         <div class="line">
-          <p class="time">[21:34:05]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>HARVEST: 2847 browser, 156 coords, 73 shopping cats</p>
         </div>
 
         <div class="line">
-          <p class="time">[21:34:06]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>SOLD to KNOWN_CORP_4471 for $3.47 via ADTECH_BROKER</p>
         </div>
 
         <div class="line">
-          <p class="time">[21:34:07]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
             AD-ENGINE: Personalized targeting
             <strong class="green">ACTIVE</strong>
@@ -124,7 +128,7 @@
         </div>
 
         <div class="line">
-          <p class="time">[21:34:08]</p>
+          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>Session terminated. User unaware.</p>
         </div>
       </div>
