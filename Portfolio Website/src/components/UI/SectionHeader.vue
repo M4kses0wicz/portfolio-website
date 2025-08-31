@@ -375,7 +375,7 @@ const props = defineProps({
 
         @for $i from 1 through 3 {
           &.anim-#{$i} {
-            animation: line-anim-#{$i} calc(random(7) * 1s) ease infinite;
+            animation: line-anim-#{$i} calc(random(7) * 1s + 2s) ease infinite;
           }
         }
       }
