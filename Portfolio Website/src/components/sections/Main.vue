@@ -268,7 +268,7 @@ main {
           color: $white;
           font-size: $M-size-font;
           font-family: $secondary-font;
-          margin-bottom: 10px;
+          // margin-bottom: 10px;
         }
       }
 
