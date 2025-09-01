@@ -218,6 +218,10 @@ import SectionHeader from "../UI/SectionHeader.vue";
 
         p {
           font-size: $L-size-font;
+
+          @include MaxWidth(1700px) {
+            font-size: 20px;
+          }
         }
       }
 

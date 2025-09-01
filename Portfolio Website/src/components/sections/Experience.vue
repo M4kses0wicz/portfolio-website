@@ -128,13 +128,12 @@ function bistro() {
                 >2</strong
               >2]</span
             >M<strong class="bold">a</strong>ny <strong class="dim">o</strong>f
-            my <strong class="strong">o</strong>wn des<strong class="normal"
+            my des<strong class="normal">i</strong>gns, an<strong class="soft"
               >i</strong
-            >gns, an<strong class="soft">i</strong>m<strong class="bright"
-              >a</strong
-            >t<strong class="bright">i</strong>ons
-            <strong class="bold">a</strong>nd oth<strong class="dim">e</strong>r
-            w<strong class="strong">o</strong>rks
+            >m<strong class="bright">a</strong>t<strong class="bright">i</strong
+            >ons <strong class="bold">a</strong>nd oth<strong class="dim"
+              >e</strong
+            >r w<strong class="strong">o</strong>rks
           </li>
         </ol>
       </div>
@@ -171,6 +170,7 @@ function bistro() {
       height: 12%;
       display: flex;
       align-items: end;
+      // justify-content: end;
 
       animation: anim ease forwards;
       animation-timeline: view();
@@ -181,6 +181,10 @@ function bistro() {
       color: $white;
       font-family: $secondary-font;
       font-size: $L-size-font;
+
+      @include MaxWidth(1700px) {
+        font-size: 20px;
+      }
     }
 
     ol {
@@ -190,6 +194,14 @@ function bistro() {
         color: $white;
         font-family: $secondary-font;
         font-size: $M-size-font;
+
+        @include MaxWidth(2220px) {
+          font-size: 17px;
+        }
+        @include MaxWidth(2100px) {
+          font-size: 15px;
+        }
+
         opacity: 90%;
         margin-top: 7px;
         width: fit-content;
@@ -226,6 +238,55 @@ function bistro() {
 
         &:hover::after {
           height: 20px;
+        }
+
+        &.zs3olk:hover::after {
+          @include MaxWidth(1857px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.github:hover::after {
+          @include MaxWidth(1640px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.plastmet:hover::after {
+          @include MaxWidth(1450px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.mk:hover::after {
+          @include MaxWidth(1230px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.ekuza:hover::after {
+          @include MaxWidth(1205px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.motorola:hover::after {
+          @include MaxWidth(1177px) {
+            height: 35px;
+            width: 100%;
+          }
+        }
+
+        &.bistro:hover::after {
+          @include MaxWidth(1043px) {
+            height: 35px;
+            width: 100%;
+          }
         }
 
         &:hover::before {

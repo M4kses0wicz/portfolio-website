@@ -319,6 +319,10 @@ const props = defineProps({
     width: 95%;
     @include FlexCenter(row);
     letter-spacing: 17px;
+
+    @include MaxWidth(1700px) {
+      font-size: 100px;
+    }
   }
 
   .carousel {
