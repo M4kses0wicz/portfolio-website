@@ -67,7 +67,7 @@ window.addEventListener("load", () => {
       width: 0.5px;
       height: 0%;
       background: $white;
-      animation: line-anim 3s ease-in-out forwards;
+      animation: line-anim 3s ease forwards;
 
       @for $i from 1 through 14 {
         &:nth-of-type(#{$i}) {
