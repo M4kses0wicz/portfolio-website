@@ -1,6 +1,6 @@
 <script setup>
 import Main from "../sections/Main.vue";
-import Canvas from "../UI/Background.vue";
+import Background from "../UI/Background.vue";
 import Nav from "../UI/Nav.vue";
 import About from "../sections/About.vue";
 import Experience from "../sections/Experience.vue";
@@ -8,7 +8,7 @@ import Footer from "../sections/Footer.vue";
 </script>
 
 <template>
-  <Canvas></Canvas>
+  <Background></Background>
   <Nav></Nav>
   <Main></Main>
   <About></About>
