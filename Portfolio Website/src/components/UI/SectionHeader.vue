@@ -1,4 +1,50 @@
 <script setup>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from "vue";
+
+const container = ref();
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container.value,
+      start: "top 95%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+  gsap.set(container.value, {
+    opacity: 0,
+  });
+  tl.to(container.value, {
+    opacity: 0.3,
+    duration: 0.1,
+    ease: "none",
+  })
+    .to(container.value, {
+      opacity: 0,
+      duration: 0.05,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 0.7,
+      duration: 0.08,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 0.2,
+      duration: 0.03,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 1,
+      duration: 0.1,
+      ease: "power2.out",
+    });
+});
+
 const props = defineProps({
   title: String,
   number: Number,
@@ -6,7 +52,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" ref="container">
     <div class="bg-section">
       <div class="wrapper">
         <div class="line anim-1"></div>
@@ -171,7 +217,7 @@ const props = defineProps({
         </div>
       </div>
     </div>
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
     <div class="carousel no2">
       <div class="wrapper">
         <div class="num">
@@ -312,7 +358,7 @@ const props = defineProps({
   position: relative;
   display: flex;
 
-  h1 {
+  h2 {
     font-family: $primary-font;
     font-size: $XXL-size-font;
     font-weight: 400;

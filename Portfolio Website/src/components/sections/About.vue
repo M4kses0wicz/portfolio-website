@@ -1,5 +1,40 @@
 <script setup>
 import SectionHeader from "../UI/SectionHeader.vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from "vue";
+
+const line = ref();
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(line.value, {
+    width: 0,
+    duration: 1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: line.value,
+      start: "top 100%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+});
+
+const line2 = ref();
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(line2.value, {
+    width: 0,
+    duration: 1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: line2.value,
+      start: "top 100%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+});
 </script>
 
 <template>
@@ -7,7 +42,7 @@ import SectionHeader from "../UI/SectionHeader.vue";
     <SectionHeader title="About me" number="1"></SectionHeader>
     <div class="content-container">
       <div class="about sec">
-        <div class="line"></div>
+        <div class="line" ref="line2"></div>
         <span>
           Wh<strong class="faint">o</strong> am
           <strong class="normal">I</strong>?
@@ -100,7 +135,7 @@ import SectionHeader from "../UI/SectionHeader.vue";
       </div>
 
       <div class="tech-stack sec">
-        <div class="line"></div>
+        <div class="line" ref="line"></div>
         <span>
           Wh<strong class="dim">a</strong>t do
           <strong class="soft">I</strong> us<strong class="bold">e</strong>?

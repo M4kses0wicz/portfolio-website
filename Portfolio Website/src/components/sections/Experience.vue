@@ -19,7 +19,7 @@ function bistro() {
 
 <template>
   <section id="experience">
-    <SectionHeader title="Experience" number="2"></SectionHeader>
+    <SectionHeader title="Experience" number="3"></SectionHeader>
     <div class="container">
       <div class="wrapper">
         <div class="txt">
