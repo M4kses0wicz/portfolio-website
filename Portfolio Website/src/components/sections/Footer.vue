@@ -107,6 +107,16 @@ footer {
     text-decoration: none;
     font-size: $XXL-size-font;
     font-family: $primary-font;
+
+    @include MaxWidth(1750px) {
+      font-size: 104px;
+    }
+    @include MaxWidth(1500px) {
+      font-size: 84px;
+    }
+    @include MaxWidth(1200px) {
+      font-size: 70px;
+    }
   }
 
   p {
@@ -126,9 +136,19 @@ footer {
     padding: 0px 50px;
     width: 100%;
 
+    @include MaxWidth(1100px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
     p {
       font-size: $S-size-font;
       opacity: 50%;
+
+      @include MaxWidth(1100px) {
+        font-size: 10px;
+        margin-top: 5px;
+      }
     }
 
     span {

@@ -1,7 +1,7 @@
 <script setup>
-let h = new Date().getUTCHours();
-let m = new Date().getUTCMinutes();
-let s = new Date().getUTCSeconds();
+let h = new Date().getHours();
+let m = new Date().getMinutes();
+let s = new Date().getSeconds();
 </script>
 
 <template>
@@ -85,51 +85,61 @@ let s = new Date().getUTCSeconds();
     <div class="container">
       <div class="terminal">
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
-          <p>Init secure sequence... packets 82345,12038,54219,30587</p>
+          <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s }}]</strong> Init secure
+            sequence... packets 82345,12038,54219,30587
+          </p>
         </div>
 
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
             Connected DESIGN_CORE_SERVER_777 | Profile: Maksymilian Klemensowicz
           </p>
         </div>
 
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
-          <p>DATA: 4fjdK2sQhXc3Bz1yLeT0VwM8aR9qN7u | P8nYlC5zJqH1aE...</p>
+          <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
+            DATA: 4fjdK2sQhXc3Bz1yLeT0VwM8aR9qN7u | P8nYlC5zJqH1aE...
+          </p>
         </div>
 
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
             Front-end Dev/UI-UX Designer | age: 17 | Verification
             <strong class="green">OK</strong>
           </p>
         </div>
 
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
-          <p>HARVEST: 2847 browser, 156 coords, 73 shopping cats</p>
-        </div>
-
-        <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
-          <p>SOLD to KNOWN_CORP_4471 for $3.47 via ADTECH_BROKER</p>
-        </div>
-
-        <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
           <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
+            HARVEST: 2847 browser, 156 coords, 73 shopping cats
+          </p>
+        </div>
+
+        <div class="line">
+          <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
+            SOLD to KNOWN_CORP_4471 for $3.47 via ADTECH_BROKER
+          </p>
+        </div>
+
+        <div class="line">
+          <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
             AD-ENGINE: Personalized targeting
             <strong class="green">ACTIVE</strong>
           </p>
         </div>
 
         <div class="line">
-          <p class="time">[{{ h }}:{{ m }}:{{ s }} UTC]</p>
-          <p>Session terminated. User unaware.</p>
+          <p>
+            <strong class="time">[{{ h }}:{{ m }}:{{ s + 3 }}]</strong>
+            Session terminated. User unaware.
+          </p>
         </div>
       </div>
       <div class="wrapper">
@@ -192,12 +202,19 @@ main {
         width: 570px;
         font-size: $M-size-font;
         align-self: flex-start;
+
+        @include MaxWidth(1345px) {
+          font-size: 15px;
+        }
       }
 
       p:nth-of-type(2) {
         align-self: flex-end;
         text-align: right;
         margin-top: 10px;
+        @include MaxWidth(1345px) {
+          margin: 0px;
+        }
       }
     }
   }
@@ -206,6 +223,10 @@ main {
     width: 100%;
     pointer-events: none;
     margin: 25px 0px;
+
+    @include MaxWidth(1345px) {
+      margin: 5px 0px;
+    }
 
     img {
       pointer-events: none;
@@ -236,14 +257,32 @@ main {
 
           // display: none;
 
-          .time {
-            opacity: 75% !important;
-            margin-right: 5px;
-          }
-
           p {
             font-size: $S-size-font;
             opacity: 50%;
+
+            @include MaxWidth(1900px) {
+              font-size: 10px;
+            }
+            @include MaxWidth(1575px) {
+              font-size: 9px;
+              margin-top: 1px;
+            }
+            @include MaxWidth(1415px) {
+              font-size: 8.5px;
+              margin-top: 1px;
+            }
+            @include MaxWidth(1345px) {
+              word-spacing: -3.5px;
+            }
+
+            strong.time {
+              color: #fff;
+              margin-right: 5px;
+              @include MaxWidth(1575px) {
+                margin-right: 0px;
+              }
+            }
           }
         }
       }
@@ -256,6 +295,10 @@ main {
         p {
           text-align: center !important;
           width: 100%;
+
+          @include MaxWidth(1245px) {
+            font-size: 15px;
+          }
         }
       }
 
@@ -292,6 +335,11 @@ main {
           opacity: 75%;
 
           animation: line-anim 4s ease infinite;
+        }
+
+        @include MaxWidth(1245px) {
+          margin-top: 5px;
+          scale: 75%;
         }
 
         .triangle {
