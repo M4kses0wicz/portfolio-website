@@ -125,11 +125,23 @@ section.quote {
 
     &.quote {
       font-size: $XL-size-font;
+
+      @include MaxWidth(1700px) {
+        font-size: 40px;
+      }
+
+      @include MaxWidth(1220px) {
+        font-size: 30px;
+      }
     }
 
     &.guy {
       font-size: $L-size-font;
       opacity: 75%;
+
+      @include MaxWidth(1220px) {
+        font-size: 15px;
+      }
     }
   }
 }
