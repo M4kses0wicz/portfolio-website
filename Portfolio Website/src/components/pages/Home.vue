@@ -5,6 +5,7 @@ import Nav from "../UI/Nav.vue";
 import About from "../sections/About.vue";
 import Experience from "../sections/Experience.vue";
 import Footer from "../sections/Footer.vue";
+import Quote from "../sections/Quote.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Footer from "../sections/Footer.vue";
   <Nav></Nav>
   <Main></Main>
   <About></About>
+  <Quote></Quote>
   <Experience></Experience>
   <Footer></Footer>
 </template>
