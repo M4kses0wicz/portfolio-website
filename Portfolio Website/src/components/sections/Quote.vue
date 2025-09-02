@@ -1,4 +1,92 @@
-<script setup></script>
+<script setup>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from "vue";
+
+const quote = ref();
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: quote.value,
+      start: "top 95%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+  gsap.set(quote.value, {
+    opacity: 0,
+  });
+  tl.to(quote.value, {
+    opacity: 0.3,
+    duration: 0.02,
+    ease: "none",
+  })
+    .to(quote.value, {
+      opacity: 0,
+      duration: 0.05,
+      ease: "none",
+    })
+    .to(quote.value, {
+      opacity: 0.7,
+      duration: 0.07,
+      ease: "none",
+    })
+    .to(quote.value, {
+      opacity: 0.2,
+      duration: 0.03,
+      ease: "none",
+    })
+    .to(quote.value, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+});
+
+const guy = ref();
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: guy.value,
+      start: "top 95%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+  gsap.set(guy.value, {
+    opacity: 0,
+  });
+  tl.to(guy.value, {
+    opacity: 0.3,
+    duration: 0.02,
+    ease: "none",
+  })
+    .to(guy.value, {
+      opacity: 0,
+      duration: 0.05,
+      ease: "none",
+    })
+    .to(guy.value, {
+      opacity: 0.7,
+      duration: 0.07,
+      ease: "none",
+    })
+    .to(guy.value, {
+      opacity: 0.2,
+      duration: 0.03,
+      ease: "none",
+    })
+    .to(guy.value, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+});
+</script>
 
 <template>
   <section class="quote">
@@ -56,17 +144,19 @@
         <div class="line anim-2"></div>
       </div>
     </div>
-    <p class="quote">
+    <p class="quote" ref="quote">
       "De<strong class="dim">t</strong>ai<strong class="soft">l</strong>s
       <strong class="normal">a</strong>re n<strong class="bold">o</strong>t
-      <strong class="faint">d</strong>et<strong class="bright">a</strong
-      >il<strong class="strong">s</strong>. T<strong class="soft">h</strong>ey
+      <strong class="faint">d</strong>et<strong class="dim">a</strong>il<strong
+        class="strong"
+        >s</strong
+      >. T<strong class="soft">h</strong>ey
       <strong class="dim">m</strong>ak<strong class="normal">e</strong> t<strong
         class="bold"
         >h</strong
       >e <strong class="faint">d</strong>es<strong class="bright">i</strong>gn."
     </p>
-    <p class="guy">
+    <p class="guy" ref="guy">
       – C<strong class="faint">h</strong>ar<strong class="bright">l</strong>es
       Ea<strong class="normal">m</strong>e<strong class="strong">s</strong>
     </p>
@@ -92,6 +182,7 @@ section.quote {
     justify-content: space-between;
     position: absolute;
     z-index: 1;
+    pointer-events: none;
 
     &.bottom {
       .wrapper {
