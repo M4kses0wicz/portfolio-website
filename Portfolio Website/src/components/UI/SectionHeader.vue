@@ -369,6 +369,15 @@ const props = defineProps({
     @include MaxWidth(1700px) {
       font-size: 100px;
     }
+
+    @include MaxWidth(1300px) {
+      font-size: 75px;
+    }
+
+    @include MaxWidth(1050px) {
+      font-size: 65px;
+      font-weight: 100;
+    }
   }
 
   .carousel {

@@ -171,6 +171,9 @@ section.quote {
   width: 100%;
   background: $black;
   margin-top: 500px;
+  @include MaxWidth(1550px) {
+    margin-top: 350px;
+  }
   position: relative;
   height: 500px;
   @include FlexCenter(column);

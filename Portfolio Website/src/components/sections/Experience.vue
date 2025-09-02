@@ -147,6 +147,9 @@ function bistro() {
 #experience {
   width: calc(100svw - 29px);
   margin: 500px 0px 500px 7px;
+  @include MaxWidth(1550px) {
+    margin: 350px 0px 350px 7px;
+  }
   padding: 0px 16.5%;
 
   .container {
@@ -184,6 +187,11 @@ function bistro() {
 
       @include MaxWidth(1700px) {
         font-size: 20px;
+      }
+
+      @include MaxWidth(1370px) {
+        letter-spacing: -1px;
+        font-size: 15px;
       }
     }
 

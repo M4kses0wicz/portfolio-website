@@ -198,6 +198,9 @@ onMounted(() => {
 #about {
   width: calc(100svw - 29px);
   margin: 500px 0px 0px 7px;
+  @include MaxWidth(1550px) {
+    margin: 350px 0px 0px 7px;
+  }
   padding: 0px 16.5%;
 
   .content-container {
@@ -232,6 +235,10 @@ onMounted(() => {
         font-size: $M-size-font;
         letter-spacing: 2px;
         word-spacing: 3px;
+
+        @include MaxWidth(1370px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -257,6 +264,11 @@ onMounted(() => {
           @include MaxWidth(1700px) {
             font-size: 20px;
           }
+
+          @include MaxWidth(1370px) {
+            font-size: 15px;
+            letter-spacing: 0px;
+          }
         }
       }
 
@@ -276,6 +288,14 @@ onMounted(() => {
             &.sm {
               font-size: $M-size-font;
               opacity: 50%;
+
+              @include MaxWidth(1370px) {
+                font-size: 15px;
+              }
+            }
+
+            @include MaxWidth(1370px) {
+              font-size: 20px;
             }
           }
         }
