@@ -20,7 +20,7 @@ onMounted(() => {
   });
   tl.to(container.value, {
     opacity: 0.3,
-    duration: 0.1,
+    duration: 0.02,
     ease: "none",
   })
     .to(container.value, {
@@ -30,7 +30,7 @@ onMounted(() => {
     })
     .to(container.value, {
       opacity: 0.7,
-      duration: 0.08,
+      duration: 0.07,
       ease: "none",
     })
     .to(container.value, {
@@ -40,7 +40,7 @@ onMounted(() => {
     })
     .to(container.value, {
       opacity: 1,
-      duration: 0.1,
+      duration: 1,
       ease: "power2.out",
     });
 });
