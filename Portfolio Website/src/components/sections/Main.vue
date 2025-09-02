@@ -93,21 +93,27 @@ let s = new Date().getSeconds();
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 1 : s }}]</strong
+            >
             Connected DESIGN_CORE_SERVER_777 | Profile: Maksymilian Klemensowicz
           </p>
         </div>
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 1 : s }}]</strong
+            >
             DATA: 4fjdK2sQhXc3Bz1yLeT0VwM8aR9qN7u | P8nYlC5zJqH1aE...
           </p>
         </div>
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 1 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 1 : s }}]</strong
+            >
             Front-end Dev/UI-UX Designer | age: 17 | Verification
             <strong class="green">OK</strong>
           </p>
@@ -115,21 +121,27 @@ let s = new Date().getSeconds();
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 2 : s }}]</strong
+            >
             HARVEST: 2847 browser, 156 coords, 73 shopping cats
           </p>
         </div>
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 2 : s }}]</strong
+            >
             SOLD to KNOWN_CORP_4471 for $3.47 via ADTECH_BROKER
           </p>
         </div>
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 2 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 2 : s }}]</strong
+            >
             AD-ENGINE: Personalized targeting
             <strong class="green">ACTIVE</strong>
           </p>
@@ -137,7 +149,9 @@ let s = new Date().getSeconds();
 
         <div class="line">
           <p>
-            <strong class="time">[{{ h }}:{{ m }}:{{ s + 3 }}]</strong>
+            <strong class="time"
+              >[{{ h }}:{{ m }}:{{ s != 60 ? s + 3 : s }}]</strong
+            >
             Session terminated. User unaware.
           </p>
         </div>
