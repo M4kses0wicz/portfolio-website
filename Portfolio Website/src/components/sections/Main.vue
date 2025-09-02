@@ -187,6 +187,7 @@ let s = new Date().getSeconds();
 
 <style lang="scss" scoped>
 @use "../../styles/base.scss" as *;
+@use "sass:math" as *;
 
 main {
   width: calc(100svw - 29px);
@@ -268,8 +269,19 @@ main {
         .line {
           flex-direction: row;
           width: 100%;
+          visibility: hidden;
+          position: fixed;
 
-          // display: none;
+          @for $i from 1 through 8 {
+            &:nth-of-type(#{$i}) {
+              animation: appear 0.5s ease forwards;
+              @if ($i <= 4) {
+                animation-delay: (3.5 + ($i * 0.15)) * 1s;
+              } @else {
+                animation-delay: (4.5 + ($i * 0.15)) * 1s;
+              }
+            }
+          }
 
           p {
             font-size: $S-size-font;
@@ -371,6 +383,16 @@ main {
 @keyframes line-anim {
   50% {
     height: 80px;
+  }
+}
+
+@keyframes appear {
+  1% {
+    position: relative;
+  }
+  100% {
+    visibility: visible;
+    position: relative;
   }
 }
 </style>
