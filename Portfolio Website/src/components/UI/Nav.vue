@@ -1,9 +1,13 @@
-<script setup></script>
+<script setup>
+function fct() {
+  alert("under development");
+}
+</script>
 
 <template>
   <nav>
     <div class="lang">
-      <p>PL</p>
+      <p @click="fct()">PL</p>
       <p><strong class="normal">/</strong></p>
       <p class="active">EN</p>
     </div>
