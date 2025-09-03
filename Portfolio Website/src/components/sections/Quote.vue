@@ -176,6 +176,9 @@ section.quote {
   }
   position: relative;
   height: 500px;
+  @include MaxWidth(800px) {
+    height: 325px;
+  }
   @include FlexCenter(column);
 
   .bg-section {
@@ -229,6 +232,12 @@ section.quote {
       }
       @include MaxWidth(950px) {
         font-size: 25px;
+      }
+      @include MaxWidth(800px) {
+        font-size: 20px;
+      }
+      @include MaxWidth(600px) {
+        text-align: center;
       }
     }
 

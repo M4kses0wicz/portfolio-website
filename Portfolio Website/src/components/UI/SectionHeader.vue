@@ -386,6 +386,19 @@ const props = defineProps({
     @include MaxWidth(950px) {
       font-size: 50px;
     }
+
+    @include MaxWidth(800px) {
+      letter-spacing: 10px;
+      font-size: 40px;
+    }
+
+    @include MaxWidth(420px) {
+      letter-spacing: 7px;
+    }
+
+    @include MaxWidth(380px) {
+      font-size: 35px;
+    }
   }
 
   .carousel {
@@ -422,6 +435,10 @@ const props = defineProps({
     justify-content: space-between;
     position: absolute;
     z-index: 1;
+
+    @include MaxWidth(590px) {
+      display: none;
+    }
 
     &.bottom {
       .wrapper {

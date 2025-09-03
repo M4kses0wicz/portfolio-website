@@ -152,6 +152,10 @@ function bistro() {
   }
   padding: 0px 16.5%;
 
+  @include MaxWidth(590px) {
+    padding: 0px;
+  }
+
   .container {
     width: 100%;
     margin-top: 75px;
@@ -162,9 +166,34 @@ function bistro() {
       display: flex;
       gap: 7px;
 
+      &:first-of-type {
+        @include MaxWidth(990px) {
+          width: 25%;
+        }
+        @include MaxWidth(750px) {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include MaxWidth(990px) {
+          width: 75%;
+          margin-left: 7px;
+        }
+
+        @include MaxWidth(750px) {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+
       div {
         width: 50%;
         // height: 100%;
+
+        @include MaxWidth(990px) {
+          width: 100%;
+        }
       }
     }
 
@@ -193,6 +222,10 @@ function bistro() {
         letter-spacing: -1px;
         font-size: 15px;
       }
+
+      @include MaxWidth(990px) {
+        font-size: 12px;
+      }
     }
 
     ol {
@@ -212,6 +245,10 @@ function bistro() {
 
         opacity: 90%;
         margin-top: 7px;
+        @include MaxWidth(990px) {
+          margin-top: 14px;
+        }
+
         width: fit-content;
         cursor: pointer;
         position: relative;
@@ -242,6 +279,10 @@ function bistro() {
           background: $white;
           transition: 0.2s;
           z-index: 1;
+
+          @include MaxWidth(990px) {
+            display: none !important;
+          }
         }
 
         &:hover::after {
@@ -299,6 +340,9 @@ function bistro() {
 
         &:hover::before {
           opacity: 1;
+          @include MaxWidth(990px) {
+            opacity: 0 !important;
+          }
         }
 
         &.mk::before {

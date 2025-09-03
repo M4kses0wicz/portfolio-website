@@ -42,8 +42,23 @@ let s = new Date().getSeconds();
           >i<strong class="faint">o</strong>n.
         </p>
         <div id="title">
-          <img src="../../assets/Klemensowicz.svg" alt="" />
+          <img src="../../assets/Klemensowicz.svg" alt="klemensowicz" />
+          <img src="../../assets/Klemensowicz.png" alt="klemen" class="alt1" />
+          <img
+            src="../../assets/Klemensowicz-2.png"
+            alt="sowicz"
+            class="alt2"
+          />
         </div>
+        <p class="p-alt">
+          Fr<strong class="bright">o</strong>nt<strong class="normal">e</strong
+          >nd W<strong class="soft">e</strong>b Dev<strong class="faint"
+            >e</strong
+          >l<strong class="bold">o</strong>p<strong class="dim">e</strong>r
+          <strong class="strong">&</strong> U<strong class="bright">I</strong
+          >/U<strong class="normal">X</strong> Des<strong class="soft">i</strong
+          >gn<strong class="faint">e</strong>r
+        </p>
         <p>
           <strong class="bright">I</strong> c<strong class="faint">r</strong
           >e<strong class="normal">a</strong>t<strong class="soft">e</strong>
@@ -221,6 +236,17 @@ main {
         @include MaxWidth(1345px) {
           font-size: 15px;
         }
+        @include MaxWidth(990px) {
+          font-size: 13px;
+        }
+        @include MaxWidth(620px) {
+          font-size: 11px;
+          width: 350px;
+        }
+
+        @include MaxWidth(470px) {
+          display: none;
+        }
       }
 
       p:nth-of-type(2) {
@@ -229,6 +255,17 @@ main {
         margin-top: 10px;
         @include MaxWidth(1345px) {
           margin: 0px;
+        }
+      }
+
+      .p-alt {
+        display: none;
+        @include MaxWidth(470px) {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          font-size: 15px !important;
+          margin-top: 20px !important;
         }
       }
     }
@@ -246,6 +283,24 @@ main {
     img {
       pointer-events: none;
       width: 100%;
+      @include MaxWidth(470px) {
+        display: none;
+      }
+    }
+
+    .alt1 {
+      margin-bottom: 5px;
+    }
+
+    .alt1,
+    .alt2 {
+      width: 100%;
+      pointer-events: none;
+      display: none;
+
+      @include MaxWidth(470px) {
+        display: block;
+      }
     }
   }
 
@@ -309,6 +364,9 @@ main {
                 margin-right: 0px;
               }
             }
+            @include MaxWidth(770px) {
+              display: none;
+            }
           }
         }
       }
@@ -342,6 +400,24 @@ main {
           font-size: $M-size-font;
           font-family: $secondary-font;
           // margin-bottom: 10px;
+
+          @include MaxWidth(800px) {
+            font-size: 13px;
+          }
+
+          @include MaxWidth(620px) {
+            position: absolute;
+            bottom: 10px;
+            right: 17px;
+          }
+        }
+
+        p {
+          @include MaxWidth(620px) {
+            position: absolute;
+            bottom: 25px;
+            right: 17px;
+          }
         }
       }
 

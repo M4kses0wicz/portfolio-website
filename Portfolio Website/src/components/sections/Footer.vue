@@ -1,5 +1,51 @@
 <script setup>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from "vue";
+
 let year = new Date().getFullYear();
+
+const container = ref();
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container.value,
+      start: "top 95%",
+      end: "bottom 20%",
+      // markers: true,
+    },
+  });
+  gsap.set(container.value, {
+    opacity: 0,
+  });
+  tl.to(container.value, {
+    opacity: 0.3,
+    duration: 0.02,
+    ease: "none",
+  })
+    .to(container.value, {
+      opacity: 0,
+      duration: 0.05,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 0.7,
+      duration: 0.07,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 0.2,
+      duration: 0.03,
+      ease: "none",
+    })
+    .to(container.value, {
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+    });
+});
 </script>
 
 <template>
@@ -25,7 +71,9 @@ let year = new Date().getFullYear();
         <div class="line anim-3"></div>
       </div>
     </div>
-    <a href="mailto:contact@klemensowicz.pl">contact@klemensowicz.pl</a>
+    <a href="mailto:contact@klemensowicz.pl" ref="container"
+      >contact@klemensowicz.pl</a
+    >
     <p class="subheading">
       Dr<strong class="bold">o</strong>p a m<strong class="bright">e</strong
       >ss<strong class="soft">a</strong>ge -
@@ -120,6 +168,15 @@ footer {
     @include MaxWidth(1000px) {
       font-size: 55px;
     }
+    @include MaxWidth(800px) {
+      font-size: 40px;
+    }
+    @include MaxWidth(600px) {
+      font-size: 30px;
+    }
+    @include MaxWidth(470px) {
+      font-size: 25px;
+    }
   }
 
   p {
@@ -134,6 +191,9 @@ footer {
       @include MaxWidth(1000px) {
         font-size: 15px;
         margin-bottom: 150px;
+      }
+      @include MaxWidth(470px) {
+        font-size: 13px;
       }
     }
   }
@@ -156,6 +216,10 @@ footer {
       @include MaxWidth(1100px) {
         font-size: 10px;
         margin-top: 5px;
+      }
+      @include MaxWidth(500px) {
+        font-size: 9px;
+        text-align: center;
       }
     }
 

@@ -48,6 +48,20 @@ onMounted(() => {
           <strong class="normal">I</strong>?
         </span>
         <p>
+          I'm a U<strong class="bright">I</strong>/U<strong class="normal"
+            >X</strong
+          >
+          des<strong class="soft">i</strong>gn<strong class="faint">e</strong>r
+          and Fr<strong class="bold">o</strong>nt<strong class="dim">e</strong
+          >nd W<strong class="strong">e</strong>b Dev<strong class="bright"
+            >e</strong
+          >l<strong class="normal">o</strong>p<strong class="soft">e</strong>r
+          wh<strong class="faint">o</strong> cr<strong class="bold">e</strong
+          >at<strong class="dim">e</strong>s cl<strong class="strong">e</strong
+          >an and p<strong class="bright">o</strong>l<strong class="normal"
+            >i</strong
+          >sh<strong class="soft">e</strong>d w<strong class="faint">e</strong
+          >bs<strong class="bold">i</strong>t<strong class="dim">e</strong>s.
           Fr<strong class="dim">o</strong>m c<strong class="soft">o</strong
           >nsul<strong class="normal">t</strong>ing
           <strong class="faint">a</strong>nd def<strong class="bold">i</strong
@@ -201,18 +215,36 @@ onMounted(() => {
   @include MaxWidth(1550px) {
     margin: 350px 0px 0px 7px;
   }
+
   padding: 0px 16.5%;
+  @include MaxWidth(590px) {
+    padding: 0px;
+  }
+
+  // @include MaxWidth(1550px) {
+  //   padding: 0;
+  // }
 
   .content-container {
     width: 100%;
     display: flex;
 
+    @include MaxWidth(800px) {
+      flex-direction: column;
+    }
+
     .sec {
       width: 50%;
+      @include MaxWidth(800px) {
+        width: 100%;
+      }
       margin-top: 100px;
 
       &:first-of-type {
         margin-top: 200px;
+        @include MaxWidth(800px) {
+          margin-top: 100px;
+        }
       }
 
       .line {
@@ -238,6 +270,14 @@ onMounted(() => {
 
         @include MaxWidth(1370px) {
           font-size: 16px;
+        }
+
+        @include MaxWidth(990px) {
+          font-size: 13px;
+        }
+
+        @include MaxWidth(800px) {
+          font-size: 15px;
         }
       }
     }
@@ -268,6 +308,17 @@ onMounted(() => {
           @include MaxWidth(1370px) {
             font-size: 15px;
             letter-spacing: 0px;
+          }
+
+          @include MaxWidth(990px) {
+            font-size: 12px;
+          }
+
+          @include MaxWidth(770px) {
+            font-size: 20px;
+          }
+          @include MaxWidth(590px) {
+            font-size: 15px;
           }
         }
       }
