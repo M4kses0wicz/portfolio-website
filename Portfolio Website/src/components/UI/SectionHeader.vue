@@ -354,6 +354,10 @@ const props = defineProps({
 .container {
   width: 100%;
   height: 250px;
+  @include MaxWidth(1300px) {
+    height: 200px;
+  }
+
   background: $white;
   position: relative;
   display: flex;
@@ -377,6 +381,10 @@ const props = defineProps({
     @include MaxWidth(1050px) {
       font-size: 65px;
       font-weight: 100;
+    }
+
+    @include MaxWidth(950px) {
+      font-size: 50px;
     }
   }
 

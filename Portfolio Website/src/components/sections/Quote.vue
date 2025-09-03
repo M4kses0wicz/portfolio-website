@@ -227,6 +227,9 @@ section.quote {
       @include MaxWidth(1220px) {
         font-size: 30px;
       }
+      @include MaxWidth(950px) {
+        font-size: 25px;
+      }
     }
 
     &.guy {
@@ -235,6 +238,10 @@ section.quote {
 
       @include MaxWidth(1220px) {
         font-size: 15px;
+      }
+
+      @include MaxWidth(950px) {
+        font-size: 13px;
       }
     }
   }

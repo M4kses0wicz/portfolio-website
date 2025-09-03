@@ -117,6 +117,9 @@ footer {
     @include MaxWidth(1200px) {
       font-size: 70px;
     }
+    @include MaxWidth(1000px) {
+      font-size: 55px;
+    }
   }
 
   p {
@@ -127,6 +130,11 @@ footer {
 
     &.subheading {
       margin-bottom: 200px;
+
+      @include MaxWidth(1000px) {
+        font-size: 15px;
+        margin-bottom: 150px;
+      }
     }
   }
 
