@@ -50,15 +50,6 @@ let s = new Date().getSeconds();
             class="alt2"
           />
         </div>
-        <p class="p-alt">
-          Fr<strong class="bright">o</strong>nt<strong class="normal">e</strong
-          >nd W<strong class="soft">e</strong>b Dev<strong class="faint"
-            >e</strong
-          >l<strong class="bold">o</strong>p<strong class="dim">e</strong>r
-          <strong class="strong">&</strong> U<strong class="bright">I</strong
-          >/U<strong class="normal">X</strong> Des<strong class="soft">i</strong
-          >gn<strong class="faint">e</strong>r
-        </p>
         <p>
           <strong class="bright">I</strong> c<strong class="faint">r</strong
           >e<strong class="normal">a</strong>t<strong class="soft">e</strong>
@@ -94,6 +85,15 @@ let s = new Date().getSeconds();
           a<strong class="bold">n</strong>d p<strong class="strong">o</strong
           >l<strong class="bright">i</strong>s<strong class="faint">h</strong
           >e<strong class="normal">d</strong>.
+        </p>
+        <p class="p-alt">
+          Fr<strong class="bright">o</strong>nt<strong class="normal">e</strong
+          >nd W<strong class="soft">e</strong>b Dev<strong class="faint"
+            >e</strong
+          >l<strong class="bold">o</strong>p<strong class="dim">e</strong>r
+          <strong class="strong">&</strong> U<strong class="bright">I</strong
+          >/U<strong class="normal">X</strong> Des<strong class="soft">i</strong
+          >gn<strong class="faint">e</strong>r
         </p>
       </div>
     </div>
@@ -253,6 +253,7 @@ main {
         align-self: flex-end;
         text-align: right;
         margin-top: 10px;
+
         @include MaxWidth(1345px) {
           margin: 0px;
         }
