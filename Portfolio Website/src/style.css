@@ -11,9 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/*        scrollbar        */
-
-/* Chrome, Safari, Edge */
 html::-webkit-scrollbar {
   display: none;
 }
@@ -22,12 +19,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Firefox */
 html {
   scrollbar-width: none;
 }
 
-/* Internet Explorer */
 body {
   -ms-overflow-style: none;
 }
