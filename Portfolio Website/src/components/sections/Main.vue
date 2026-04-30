@@ -17,11 +17,7 @@ let s = new Date().getSeconds();
           >s<strong class="bold">i</strong>g<strong class="bright">n</strong>
           f<strong class="faint">o</strong>r w<strong class="strong">e</strong
           >b<strong class="normal">s</strong>i<strong class="soft">t</strong
-          >e<strong class="dim">s</strong> a<strong class="bold">n</strong>d
-          d<strong class="bright">i</strong>g<strong class="faint">i</strong
-          >t<strong class="strong">a</strong>l p<strong class="normal">l</strong
-          >a<strong class="soft">t</strong>f<strong class="dim">o</strong
-          >r<strong class="bold">m</strong>s.
+          >e<strong class="dim">s</strong>.
           <strong class="bright">I</strong> c<strong class="faint">r</strong
           >e<strong class="strong">a</strong>t<strong class="normal">e</strong>
           i<strong class="soft">n</strong>t<strong class="dim">u</strong
@@ -51,40 +47,27 @@ let s = new Date().getSeconds();
           />
         </div>
         <p>
-          <strong class="bright">I</strong> c<strong class="faint">r</strong
-          >e<strong class="normal">a</strong>t<strong class="soft">e</strong>
-          w<strong class="dim">e</strong>b<strong class="bold">s</strong
-          >i<strong class="strong">t</strong>e<strong class="bright">s</strong>
-          t<strong class="dim">h</strong>a<strong class="bold">t</strong>
-          a<strong class="strong">r</strong>e s<strong class="bright">m</strong
-          >o<strong class="faint">o</strong>t<strong class="normal">h</strong>,
-          i<strong class="soft">n</strong>t<strong class="dim">u</strong
-          >i<strong class="bold">t</strong>i<strong class="strong">v</strong>e,
-          a<strong class="bright">n</strong>d e<strong class="faint">n</strong
-          >j<strong class="normal">o</strong>y<strong class="soft">a</strong
-          >b<strong class="dim">l</strong>e t<strong class="bold">o</strong>
-          u<strong class="strong">s</strong>e. M<strong class="bright"
-            >y</strong
+          I cr<strong class="bright">e</strong>at<strong class="normal"
+            >e</strong
           >
-          f<strong class="faint">o</strong>c<strong class="normal">u</strong>s
-          i<strong class="soft">s</strong> o<strong class="dim">n</strong>
-          m<strong class="bold">a</strong>k<strong class="strong">i</strong
-          >n<strong class="bright">g</strong> s<strong class="faint">u</strong
-          >r<strong class="normal">e</strong> e<strong class="soft">v</strong
-          >e<strong class="dim">r</strong>y i<strong class="bold">n</strong
-          >t<strong class="strong">e</strong>r<strong class="bright">a</strong
-          >c<strong class="faint">t</strong>i<strong class="normal">o</strong>n
-          f<strong class="soft">e</strong>e<strong class="dim">l</strong>s
-          n<strong class="bold">a</strong>t<strong class="strong">u</strong
-          >r<strong class="bright">a</strong>l a<strong class="faint">n</strong
-          >d e<strong class="normal">v</strong>e<strong class="soft">r</strong>y
-          i<strong class="dim">n</strong>t<strong class="bold">e</strong
-          >r<strong class="strong">f</strong>a<strong class="bright">c</strong>e
-          l<strong class="faint">o</strong>o<strong class="normal">k</strong>s
-          c<strong class="soft">l</strong>e<strong class="dim">a</strong>n
-          a<strong class="bold">n</strong>d p<strong class="strong">o</strong
-          >l<strong class="bright">i</strong>s<strong class="faint">h</strong
-          >e<strong class="normal">d</strong>.
+          web<strong class="soft">s</strong>it<strong class="faint">e</strong>s
+          th<strong class="bold">a</strong>t ar<strong class="dim">e</strong>
+          en<strong class="strong">j</strong>oy<strong class="bright">a</strong
+          >bl<strong class="normal">e</strong> to us<strong class="soft"
+            >e</strong
+          >, mak<strong class="faint">i</strong>ng ev<strong class="bold"
+            >e</strong
+          >ry int<strong class="dim">e</strong>r<strong class="strong">a</strong
+          >ct<strong class="bright">i</strong>on fe<strong class="normal"
+            >e</strong
+          >l nat<strong class="soft">u</strong>r<strong class="faint">a</strong
+          >l and ev<strong class="bold">e</strong>ry int<strong class="dim"
+            >e</strong
+          >rf<strong class="strong">a</strong>ce lo<strong class="bright"
+            >o</strong
+          >k cl<strong class="normal">e</strong>an and pol<strong class="soft"
+            >i</strong
+          >sh<strong class="faint">e</strong>d.
         </p>
         <p class="p-alt">
           Fr<strong class="bright">o</strong>nt<strong class="normal">e</strong
@@ -129,7 +112,7 @@ let s = new Date().getSeconds();
             <strong class="time"
               >[{{ h }}:{{ m }}:{{ s != 60 ? s + 1 : s }}]</strong
             >
-            Front-end Dev/UI-UX Designer | age: 17 | Verification
+            Front-end Dev/UI-UX Designer | age: 18 | Verification
             <strong class="green">OK</strong>
           </p>
         </div>
