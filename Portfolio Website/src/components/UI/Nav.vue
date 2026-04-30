@@ -20,7 +20,7 @@ function fct() {
 
 nav {
   position: fixed;
-  z-index: 999 !important;
+  z-index: 99 !important;
   color: $white;
   font-family: $secondary-font;
   margin: 0px 7px;
