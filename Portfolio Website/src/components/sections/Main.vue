@@ -8,34 +8,10 @@ let s = new Date().getSeconds();
   <main>
     <div class="main-txt-container">
       <div class="wrapper">
-        <p>
-          <strong class="normal">I</strong> s<strong class="soft">p</strong
-          >e<strong class="dim">c</strong>i<strong class="bold">a</strong
-          >l<strong class="bright">i</strong>z<strong class="faint">e</strong>
-          i<strong class="strong">n</strong> U<strong class="normal">I</strong
-          >/<strong class="soft">U</strong>X d<strong class="dim">e</strong
-          >s<strong class="bold">i</strong>g<strong class="bright">n</strong>
-          f<strong class="faint">o</strong>r w<strong class="strong">e</strong
-          >b<strong class="normal">s</strong>i<strong class="soft">t</strong
-          >e<strong class="dim">s</strong>.
-          <strong class="bright">I</strong> c<strong class="faint">r</strong
-          >e<strong class="strong">a</strong>t<strong class="normal">e</strong>
-          i<strong class="soft">n</strong>t<strong class="dim">u</strong
-          >i<strong class="bold">t</strong>i<strong class="bright">v</strong>e
-          u<strong class="faint">s</strong>e<strong class="strong">r</strong>
-          j<strong class="normal">o</strong>u<strong class="soft">r</strong
-          >n<strong class="dim">e</strong>y<strong class="bold">s</strong>
-          t<strong class="strong">h</strong>a<strong class="normal">t</strong>
-          g<strong class="soft">u</strong>i<strong class="dim">d</strong>e
-          u<strong class="bold">s</strong>e<strong class="bright">r</strong>s
-          s<strong class="faint">e</strong>a<strong class="strong">m</strong
-          >l<strong class="normal">e</strong>s<strong class="soft">s</strong
-          >l<strong class="dim">y</strong> t<strong class="bold">h</strong
-          >r<strong class="bright">o</strong>u<strong class="faint">g</strong>h
-          e<strong class="strong">v</strong>e<strong class="normal">r</strong>y
-          i<strong class="soft">n</strong>t<strong class="dim">e</strong
-          >r<strong class="bold">a</strong>c<strong class="bright">t</strong
-          >i<strong class="faint">o</strong>n.
+        <p class="p">
+          <strong class="bright">U</strong>I/<strong class="normal">U</strong
+          ><strong class="soft">X</strong> Des<strong class="faint">i</strong
+          >gn<strong class="bold">e</strong>r
         </p>
         <div id="title">
           <img src="../../assets/Klemensowicz.svg" alt="klemensowicz" />
@@ -46,28 +22,12 @@ let s = new Date().getSeconds();
             class="alt2"
           />
         </div>
-        <p>
-          I cr<strong class="bright">e</strong>at<strong class="normal"
+        <p class="p">
+          <strong class="dim">F</strong>r<strong class="strong">o</strong
+          >nt-<strong class="bright">e</strong>nd W<strong class="normal"
             >e</strong
-          >
-          web<strong class="soft">s</strong>it<strong class="faint">e</strong>s
-          th<strong class="bold">a</strong>t ar<strong class="dim">e</strong>
-          en<strong class="strong">j</strong>oy<strong class="bright">a</strong
-          >bl<strong class="normal">e</strong> to us<strong class="soft"
-            >e</strong
-          >, mak<strong class="faint">i</strong>ng ev<strong class="bold"
-            >e</strong
-          >ry int<strong class="dim">e</strong>r<strong class="strong">a</strong
-          >ct<strong class="bright">i</strong>on fe<strong class="normal"
-            >e</strong
-          >l nat<strong class="soft">u</strong>r<strong class="faint">a</strong
-          >l and ev<strong class="bold">e</strong>ry int<strong class="dim"
-            >e</strong
-          >rf<strong class="strong">a</strong>ce lo<strong class="bright"
-            >o</strong
-          >k cl<strong class="normal">e</strong>an and pol<strong class="soft"
-            >i</strong
-          >sh<strong class="faint">e</strong>d.
+          >b Dev<strong class="soft">e</strong>l<strong class="faint">o</strong
+          >p<strong class="bold">e</strong>r
         </p>
         <p class="p-alt">
           Fr<strong class="bright">o</strong>nt<strong class="normal">e</strong
@@ -197,6 +157,10 @@ main {
     font-family: $secondary-font;
     color: $white;
     font-size: $M-size-font;
+  }
+
+  .p {
+    font-size: $L-size-font !important;
   }
 
   .main-txt-container {
