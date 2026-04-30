@@ -165,7 +165,14 @@ onMounted(() => {
           <div class="right-sec">
             <ol>
               <li>
-                V<strong class="normal">u</strong>e.<strong class="faint"
+                R<strong class="bold">e</strong>a<strong class="normal"
+                  >c</strong
+                ><strong class="bright">t</strong>.<strong class="faint"
+                  >j</strong
+                >s
+              </li>
+              <li>
+                V<strong class="normal">u</strong>e.<strong class="normal"
                   >j</strong
                 >s
               </li>
@@ -296,7 +303,7 @@ onMounted(() => {
 
         animation: anim ease forwards;
         animation-timeline: view();
-        animation-range: entry 10% cover 200%;
+        animation-range: entry 10% cover 150%;
 
         p {
           font-size: $L-size-font;
