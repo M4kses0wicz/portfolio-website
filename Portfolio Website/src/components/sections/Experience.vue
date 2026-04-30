@@ -9,10 +9,18 @@ function ekuza() {
   window.open("https://ekuzaestates.co.uk", "_blank");
 }
 
+function plastmet() {
+  window.open("https://plast-met.com", "_blank");
+}
+
+function motorola() {
+  window.open("https://www.motorolasolutions.com", "_blank");
+}
+
 function bistro() {
   window.open(
     "https://github.com/M4kses0wicz/Bistro-u-Mocnych.github.io",
-    "_blank"
+    "_blank",
   );
 }
 </script>
@@ -46,7 +54,7 @@ function bistro() {
               >i</strong
             >te
           </li>
-          <li class="plastmet">
+          <li class="plastmet" @click="plastmet">
             <span
               >[A<strong class="normal">U</strong>G
               <strong class="soft">2</strong>0<strong class="bright">2</strong
@@ -61,7 +69,7 @@ function bistro() {
               >e</strong
             >rn<strong class="bold">s</strong>h<strong class="dim">i</strong>p
           </li>
-          <li class="motorola">
+          <li class="motorola" @click="motorola">
             <span
               >[A<strong class="strong">P</strong>R
               <strong class="normal">2</strong>0<strong class="soft">2</strong
