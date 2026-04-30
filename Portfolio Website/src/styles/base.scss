@@ -56,10 +56,10 @@ $timing-fct: steps(2);
 @keyframes blink-faint {
   0%,
   100% {
-    opacity: 0.25;
+    opacity: 0.35;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.45;
   }
 }
 

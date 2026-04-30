@@ -48,103 +48,53 @@ onMounted(() => {
           <strong class="normal">I</strong>?
         </span>
         <p>
-          I'm a U<strong class="bright">I</strong>/U<strong class="normal"
-            >X</strong
+          I des<strong class="bright">i</strong>gn
+          <strong class="normal">a</strong>nd bu<strong class="soft">i</strong
+          >ld m<strong class="faint">o</strong>d<strong class="bold">e</strong
+          >rn w<strong class="dim">e</strong>b exp<strong class="strong"
+            >e</strong
+          >ri<strong class="bright">e</strong>nc<strong class="normal">e</strong
+          >s th<strong class="soft">a</strong>t ar<strong class="faint"
+            >e</strong
           >
-          des<strong class="soft">i</strong>gn<strong class="faint">e</strong>r
-          and Fr<strong class="bold">o</strong>nt<strong class="dim">e</strong
-          >nd W<strong class="strong">e</strong>b Dev<strong class="bright"
-            >e</strong
-          >l<strong class="normal">o</strong>p<strong class="soft">e</strong>r
-          wh<strong class="faint">o</strong> cr<strong class="bold">e</strong
-          >at<strong class="dim">e</strong>s cl<strong class="strong">e</strong
-          >an and p<strong class="bright">o</strong>l<strong class="normal"
-            >i</strong
-          >sh<strong class="soft">e</strong>d w<strong class="faint">e</strong
-          >bs<strong class="bold">i</strong>t<strong class="dim">e</strong>s.
-          Fr<strong class="dim">o</strong>m c<strong class="soft">o</strong
-          >nsul<strong class="normal">t</strong>ing
-          <strong class="faint">a</strong>nd def<strong class="bold">i</strong
-          >n<strong class="dim">i</strong>ng req<strong class="bright">u</strong
-          >ir<strong class="normal">e</strong>ments w<strong class="soft"
-            >i</strong
-          >th the c<strong class="faint">l</strong>i<strong class="bold"
-            >e</strong
-          >nt, thr<strong class="strong">o</strong>ugh des<strong class="dim"
-            >i</strong
-          >gn<strong class="strong">i</strong>ng in F<strong class="bright"
-            >i</strong
-          >g<strong class="normal">m</strong>a, to c<strong class="soft"
+          cl<strong class="bold">e</strong>an, p<strong class="dim">o</strong
+          >l<strong class="strong">i</strong>sh<strong class="bright">e</strong
+          >d, and bu<strong class="normal">i</strong>lt t<strong class="soft"
             >o</strong
-          >d<strong class="faint">i</strong>ng and del<strong class="bold"
-            >i</strong
-          >v<strong class="dim">e</strong>r<strong class="strong">i</strong>ng
-          the f<strong class="bright">i</strong>n<strong class="normal"
-            >a</strong
-          >l pr<strong class="soft">o</strong>du<strong class="faint">c</strong
-          >t, I h<strong class="bold">a</strong>n<strong class="dim">d</strong
-          >le ev<strong class="strong">e</strong>ry st<strong class="bright"
+          >
+          pe<strong class="faint">r</strong>f<strong class="bold">o</strong>rm.
+          Fr<strong class="dim">o</strong>m def<strong class="strong">i</strong
+          >n<strong class="bright">i</strong>ng id<strong class="normal"
             >e</strong
-          >p w<strong class="normal">i</strong>th f<strong class="soft"
+          >as w<strong class="soft">i</strong>th cl<strong class="faint"
+            >i</strong
+          >ents t<strong class="bold">o</strong> des<strong class="dim"
+            >i</strong
+          >gn<strong class="strong">i</strong>ng and del<strong class="bright"
+            >i</strong
+          >v<strong class="normal">e</strong>r<strong class="soft">i</strong>ng
+          the f<strong class="faint">i</strong>n<strong class="bold">a</strong>l
+          pr<strong class="dim">o</strong>d<strong class="strong">u</strong>ct,
+          I k<strong class="bright">e</strong>ep the pr<strong class="normal"
             >o</strong
-          >c<strong class="faint">u</strong>s and eff<strong class="bold"
+          >c<strong class="soft">e</strong>ss s<strong class="faint">i</strong
+          >mpl<strong class="bold">e</strong> and eff<strong class="dim"
             >i</strong
-          >c<strong class="dim">i</strong>en<strong class="strong">c</strong>y.
-          The cl<strong class="bright">i</strong>e<strong class="normal"
-            >n</strong
-          >t s<strong class="soft">e</strong>ts the v<strong class="faint"
+          >c<strong class="strong">i</strong>ent, del<strong class="bright"
             >i</strong
-          >s<strong class="bold">i</strong>on, I ad<strong class="dim">a</strong
-          >pt and m<strong class="strong">a</strong>ke it h<strong
-            class="bright"
-            >a</strong
-          >pp<strong class="normal">e</strong>n — no unn<strong class="soft"
+          >v<strong class="normal">e</strong>r<strong class="soft">i</strong>ng
+          ex<strong class="faint">a</strong>ctl<strong class="bold">y</strong>
+          wh<strong class="dim">a</strong>t the cl<strong class="strong"
+            >i</strong
+          >ent w<strong class="bright">a</strong>nts, ev<strong class="normal"
             >e</strong
-          >c<strong class="faint">e</strong>ss<strong class="bold">a</strong>ry
-          deb<strong class="dim">a</strong>tes, no w<strong class="strong"
-            >a</strong
-          >s<strong class="bright">t</strong>ed t<strong class="normal"
-            >i</strong
-          >me, j<strong class="soft">u</strong>st str<strong class="faint"
-            >a</strong
-          >igh<strong class="bold">t</strong>f<strong class="dim">o</strong
-          >rw<strong class="strong">a</strong>rd coll<strong class="bright"
-            >a</strong
-          >b<strong class="normal">o</strong>r<strong class="soft">a</strong
-          >t<strong class="faint">i</strong>on and p<strong class="bold"
+          >n wh<strong class="soft">e</strong>n th<strong class="faint"
+            >e</strong
+          >y d<strong class="bold">o</strong>n't f<strong class="dim">u</strong
+          >ll<strong class="strong">y</strong> kn<strong class="bright"
             >o</strong
-          >l<strong class="dim">i</strong>sh<strong class="strong">e</strong>d
-          r<strong class="bright">e</strong>s<strong class="normal">u</strong
-          >lts. I k<strong class="soft">e</strong>ep the pr<strong class="faint"
-            >o</strong
-          >c<strong class="bold">e</strong>ss sm<strong class="dim">o</strong
-          ><strong class="strong">o</strong>th and pr<strong class="bright"
-            >e</strong
-          >d<strong class="normal">i</strong>ct<strong class="soft">a</strong
-          >ble, t<strong class="faint">u</strong>rn<strong class="bold"
-            >i</strong
-          >ng <strong class="dim">i</strong>d<strong class="strong">e</strong>as
-          <strong class="bright">i</strong>nto a s<strong class="normal"
-            >e</strong
-          ><strong class="soft">a</strong>ml<strong class="faint">e</strong>ss,
-          f<strong class="bold">u</strong>nct<strong class="dim">i</strong
-          ><strong class="strong">o</strong>nal o<strong class="bright"
-            >u</strong
-          >tc<strong class="normal">o</strong>me — del<strong class="soft"
-            >i</strong
-          >v<strong class="faint">e</strong>r<strong class="bold">i</strong>ng
-          ex<strong class="dim">a</strong>c<strong class="strong">t</strong>ly
-          wh<strong class="bright">a</strong>t the cl<strong class="normal"
-            >i</strong
-          ><strong class="soft">e</strong>nt w<strong class="faint">a</strong
-          >nts, <strong class="bold">e</strong>v<strong class="dim">e</strong>n
-          wh<strong class="strong">e</strong>n th<strong class="bright"
-            >e</strong
-          >y d<strong class="normal">o</strong>n't f<strong class="soft"
-            >u</strong
-          >ll<strong class="faint">y</strong> kn<strong class="bold">o</strong>w
-          th<strong class="dim">e</strong>ms<strong class="strong">e</strong
-          >lv<strong class="bright">e</strong>s.
+          >w th<strong class="normal">e</strong>ms<strong class="soft">e</strong
+          >lv<strong class="faint">e</strong>s.
         </p>
       </div>
 
