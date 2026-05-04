@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loading-screen").classList.add("vanish");
-  }, 3500);
+  }, 3000);
 });
 </script>
 
@@ -29,6 +29,14 @@ window.addEventListener("load", () => {
         <div class="line anim-3"></div>
       </div>
     </div>
+    <p class="loading">
+      <span>l</span>
+      <strong class="bright"><span>o</span></strong
+      ><span>a</span><span>d</span> <span class="s"></span
+      ><strong class="normal"><span>i</span></strong
+      ><span>n</span><strong class="soft"><span>g</span></strong
+      ><span>.</span><span>.</span><span>.</span><span class="sml">.</span>
+    </p>
   </div>
 </template>
 
@@ -89,6 +97,54 @@ window.addEventListener("load", () => {
 @keyframes line-anim {
   to {
     height: 100%;
+  }
+}
+
+.loading {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  opacity: 75%;
+  letter-spacing: 2px;
+  font-size: 17px;
+  display: flex;
+  &::after {
+    content: "";
+    display: inline-block;
+  }
+  .s {
+    width: 0px;
+    display: block;
+    animation: s 0.25s 1.2s ease-out forwards;
+  }
+  .sml {
+    opacity: 0;
+    pointer-events: none;
+    font-size: 10px;
+  }
+
+  @for $i from 1 through 3 {
+    .dot-#{$i} {
+      animation: blink 1.2s infinite;
+      animation-delay: #{($i - 1) * 0.3}s;
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes s {
+  to {
+    width: 15px;
   }
 }
 </style>
